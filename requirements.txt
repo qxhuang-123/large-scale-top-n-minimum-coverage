@@ -1,0 +1,12 @@
+numpy>=1.26
+pandas>=2.1
+openpyxl>=3.1
+matplotlib>=3.8
+numba>=0.59
+ortools>=9.10
+psutil>=5.9
+pyyaml>=6.0
+
+# Optional: required only by Gurobi and Gurobi-LP experiments.
+# gurobipy>=11.0
+

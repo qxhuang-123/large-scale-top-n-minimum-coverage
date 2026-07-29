@@ -1,0 +1,24 @@
+defaults:
+  alpha: 0.40
+  list_length: 10
+  coverage_percentages: [0, 20, 40, 60, 80, 100]
+
+datasets:
+  OP:
+    scores: data/raw/op/scores.xlsx
+    expected_shape: [4905, 2420]
+  Yelp:
+    scores: data/raw/yelp/scores.xlsx
+    expected_shape: [9464, 11197]
+  VG:
+    scores: data/raw/vg/scores.xlsx
+    expected_shape: [24303, 10672]
+  TG:
+    scores: data/raw/tg/scores.xlsx
+    expected_shape: [19412, 11924]
+  SO:
+    scores:
+      - data/raw/so/scores_part1.csv
+      - data/raw/so/scores_part2.csv
+      - data/raw/so/scores_part3.csv
+

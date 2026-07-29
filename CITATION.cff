@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Preference-Safe Minimum-Coverage Top-N Recommendation via Minimum-Cost Flow"
+message: "Please cite the associated article when using this code."
+type: software
+authors:
+  - family-names: Huang
+    given-names: Q.
+repository-code: "https://github.com/qxhuang-123"
+license: MIT
+
