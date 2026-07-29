@@ -1,14 +1,16 @@
-# TPCAR implementation note
+# Build the TPCAR extension
 
-Production experiments import `tpcar_core_fast`, a pybind11 C++ extension that
-builds the implicit exchange graph and runs Dijkstra with Johnson potentials.
-The historical Python-only OP prototype is included for algorithm inspection,
-but it materializes a dense selection matrix and is unsuitable for the largest
-datasets.
+The production experiments import `tpcar_core_fast`, the included pybind11
+C++ extension that builds the implicit exchange graph and runs Dijkstra with
+Johnson potentials.
 
-The extension source was referenced by experiment runners but was not present
-in the manuscript directory or located dataset folders. It must be added
-before claiming a fully self-contained artifact. Until then, the runner files
-and reported outputs are traceable, but the optimized TPCAR binary cannot be
-rebuilt from this repository alone.
+```bash
+python -m pip install -r requirements-build.txt
+cd src/tpcar
+python setup.py build_ext --inplace
+```
+
+Use a C++17 compiler matching the active Python architecture. On Windows, use
+the corresponding MSVC Build Tools. Compiled `.pyd` files are excluded so the
+repository does not distribute opaque, platform-specific binaries.
 
