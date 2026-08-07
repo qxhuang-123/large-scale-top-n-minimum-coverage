@@ -25,7 +25,7 @@ The repository follows the paper's computational pipeline:
 | `src/bgcr/` | Numba implementation of the batched heuristic |
 | `src/sensitivity/` | sensitivity to `D/|I^alpha|` and `alpha` |
 | `legacy/` | original runners retained for result traceability |
-| `paper/` | manuscript PDF and experiment-to-code crosswalk |
+| `paper/` | reproducibility notes and experiment-to-code crosswalk (the manuscript PDF is intentionally not included) |
 
 ## Data
 
