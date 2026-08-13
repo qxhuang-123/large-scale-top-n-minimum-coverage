@@ -1,8 +1,8 @@
-# Preference-Safe Minimum-Coverage Top-N Recommendation
+# Large-Scale Top-N Recommendation with Minimum Item Coverage
 
-Code and experiment inventory for the manuscript *Preference-Safe
-Minimum-Coverage Top-N Recommendation via Minimum-Cost Flow*, submitted to
-*Computers & Operations Research*.
+Code and experiment inventory for the manuscript *Large-Scale Top-N
+Recommendation with Minimum Item Coverage: A Network-Flow Reformulation and
+Specialized Algorithms*, submitted to *Computers & Operations Research*.
 
 The repository follows the paper's computational pipeline:
 
