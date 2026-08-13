@@ -20,6 +20,8 @@ import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment, Border, Font, Side
 
+from src.common.initial_topn import initial_topn as shared_initial_topn
+
 try:
     from numba import njit
 except Exception:
@@ -307,32 +309,10 @@ def build_candidate_csr(name: str, scores: np.ndarray):
 
 
 def initial_topn(num_users: int, num_items: int, user_indptr, user_items, user_scores, n: int):
-    selected_items = np.full((num_users, n), -1, dtype=np.int32)
-    selected_scores = np.zeros((num_users, n), dtype=np.float32)
-    counts = np.zeros(num_items, dtype=np.int32)
-    total_score = 0.0
-    total_recs = 0
-
-    for u in range(num_users):
-        s, e = int(user_indptr[u]), int(user_indptr[u + 1])
-        length = e - s
-        if length <= 0:
-            continue
-        k = min(n, length)
-        vals = user_scores[s:e]
-        local = np.argpartition(vals, -k)[-k:]
-        local = local[np.argsort(-vals[local])]
-        for pos, loc in enumerate(local):
-            edge = s + int(loc)
-            item = int(user_items[edge])
-            score = float(user_scores[edge])
-            selected_items[u, pos] = item
-            selected_scores[u, pos] = score
-            counts[item] += 1
-            total_score += score
-            total_recs += 1
+    selected_items, selected_scores, counts, total_score, total_recs, _ = shared_initial_topn(
+        num_users, num_items, user_indptr, user_items, user_scores, n
+    )
     return selected_items, selected_scores, counts, total_score, total_recs
-
 
 if njit is not None:
     @njit(cache=True)

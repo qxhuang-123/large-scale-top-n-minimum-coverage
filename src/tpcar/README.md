@@ -31,3 +31,7 @@ Results are written under `outputs/tpcar/so/`. The runner uses the shared
 `tpcar_core_fast` extension above and preserves the iteration-history,
 spreadsheet, JSON, and figure outputs used for the SO exact experiment.
 
+
+## Initial solution only
+
+`run_tpcar_initial_only.py` reports the coverage-relaxed Top-N solution without augmentation and calls the same deterministic initializer as BGCR.

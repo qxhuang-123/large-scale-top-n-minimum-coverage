@@ -23,6 +23,7 @@ The repository follows the paper's computational pipeline:
 | `src/mcf/` | explicit OR-Tools SimpleMinCostFlow experiments |
 | `src/tpcar/` | exact implicit augmentation experiments |
 | `src/bgcr/` | Numba implementation of the batched heuristic |
+| `src/common/` | deterministic Top-N initialization shared by TPCAR and BGCR |
 | `src/sensitivity/` | sensitivity to `D/|I^alpha|` and `alpha` |
 | `legacy/` | original runners retained for result traceability |
 | `paper/` | reproducibility notes and experiment-to-code crosswalk (the manuscript PDF is intentionally not included) |
@@ -66,6 +67,14 @@ The scripts in `legacy/` are the exact runners used for reported tables and
 figures. They retain historical output schemas and some original absolute
 paths. Organized copies under `src/` are grouped by method; replace their
 paths with entries from `config/datasets.yaml` before large reruns.
+
+### Shared initial solution
+
+TPCAR and BGCR use the same deterministic coverage-relaxed Top-N initializer in `src/common/initial_topn.py`: scores are ordered descending and equal scores are resolved by ascending item ID. BGCR continues from this solution through its complete repair procedure. To report only the matching TPCAR initial solution, run:
+
+```bash
+python src/tpcar/run_tpcar_initial_only.py --dataset OP --scores path/to/scores.npy --candidates path/to/candidates.npz --n 10
+```
 
 ## Reproducibility status
 
