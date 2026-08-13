@@ -12,7 +12,5 @@
 | Sensitivity to coverage ratio | OP, Yelp, VG, TG | exact runners at six nominal ratios |
 | Sensitivity to `alpha` | OP, Yelp, VG, TG | `src/sensitivity/` |
 
-The manuscript reports raw dataset statistics, while optimization instances
-may be slightly smaller after removing users or items with no eligible edge.
-Always report both raw and post-filter candidate-graph shapes.
+The manuscript reports raw dataset statistics before candidate filtering and feasibility preprocessing, while optimization instances may be slightly smaller after removing users or items with no eligible edge. Always report both raw and post-filter candidate-graph shapes.
 

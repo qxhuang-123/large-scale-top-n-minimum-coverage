@@ -78,9 +78,7 @@ python src/tpcar/run_tpcar_initial_only.py --dataset OP --scores path/to/scores.
 
 ## Reproducibility status
 
-OP provides the complete independent exactness benchmark across Gurobi,
-Gurobi-LP, MCF, and TPCAR. Large-instance dashes in the manuscript are genuine
-time or memory limits, not missing runs.
+OP provides the complete independent exactness benchmark across Gurobi, Gurobi-LP, MCF, and TPCAR. For target-specific comparisons, BGCR should be evaluated against an exact solution only when its reported actual coverage meets the nominal target. Large-instance dashes in the manuscript are genuine time or memory limits, not missing runs.
 
 For archival publication, create a tagged release and deposit that release,
 small result tables, environment metadata, and checksums for externally hosted
