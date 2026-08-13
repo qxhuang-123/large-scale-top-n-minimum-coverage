@@ -5,7 +5,7 @@
 The source code used for data preprocessing, the Gurobi and Gurobi-LP
 benchmarks, explicit minimum-cost flow, TPCAR, BGCR, and sensitivity analyses
 is publicly available at
-https://github.com/qxhuang-123/preference-safe-minimum-coverage. The repository
+https://github.com/qxhuang-123/large-scale-top-n-minimum-coverage. The repository
 includes environment requirements, an experiment crosswalk, compiled extension
 source, and small result tables. A versioned archival DOI should be inserted
 after creating the corresponding Zenodo, Mendeley Data, or Code Ocean record.

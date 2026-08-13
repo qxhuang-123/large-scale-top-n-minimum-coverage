@@ -11,6 +11,6 @@ authors:
     given-names: Kai
   - family-names: Huang
     given-names: Qixuan
-repository-code: "https://github.com/qxhuang-123/preference-safe-minimum-coverage"
+repository-code: "https://github.com/qxhuang-123/large-scale-top-n-minimum-coverage"
 license: MIT
 
