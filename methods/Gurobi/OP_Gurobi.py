@@ -60,7 +60,7 @@ N = 10
 ALPHA = 0.40
 D_PERCENTAGES = [0, 20, 40, 60, 80, 100]
 
-USE_LP_RELAXATION = True
+USE_LP_RELAXATION = False
 TIME_LIMIT_SECONDS = None  # Example: 3600. None means no time limit.
 THREADS = 1
 MIP_GAP = 0.0
