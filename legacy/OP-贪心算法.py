@@ -430,7 +430,7 @@ def run_dataset(dataset: str, n: int, history_interval: int, max_rounds: int):
 
     percent_rows = []
     for pct in D_PERCENTAGES:
-        d_target = int(round(num_items * pct / 100.0))
+        d_target = int(math.ceil(items_with_candidates * pct / 100.0))
         idx = first_reached(hist_d, d_target)
         percent_rows.append(
             {
