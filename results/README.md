@@ -1,12 +1,14 @@
-# Processed experiment results
+# Results policy
 
-- `bgcr/` contains machine-readable JSON outputs for all five datasets.
-- `exact/` contains the retained TPCAR workbooks for OP, Yelp, VG, and TG.
-- `gurobi/` contains the OP binary and LP benchmark workbooks.
-- `vg_tg_alpha_sensitivity.csv` contains the available VG/TG retention-rate
-  sensitivity results.
+The previous archived JSON/XLSX/CSV files were removed because their dataset
+shapes and initial coverages do not match Tables 2--5 of the submitted COR
+manuscript. Keeping them would make the repository appear reproducible while
+silently using a different preprocessing snapshot.
 
-These files are derived experiment outputs, not raw ratings or predicted score
-matrices. Workbooks are retained without value or formatting changes for audit
-traceability. Future releases should add CSV/JSON exports for every manuscript
-table and figure while keeping these originals as provenance records.
+Generate replacement results only after confirming the manuscript dataset
+shapes: OP 4,905 x 2,420; Yelp 9,464 x 11,197; VG 24,303 x 10,672;
+TG 19,412 x 11,924; SO 35,598 x 18,357. All five methods must use the same
+candidate cache, alpha=0.40, N=10, candidate universe I^alpha, and
+D_target=ceil(|I^alpha|*p/100). Results should include the metadata fields
+`dataset_shape`, `items_with_candidates`, `candidate_fraction`,
+`D_target_base`, and `D_target_rounding`.
