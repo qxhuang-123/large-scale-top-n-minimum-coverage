@@ -1,0 +1,13 @@
+{
+  "dataset": "SO",
+  "N": 10,
+  "mode": "TPCAR_INITIAL_ONLY",
+  "objective": 1768054.7759962082,
+  "total_recs": 355980,
+  "initial_D": 2964,
+  "items_with_candidates": 17951,
+  "scores": "E:\\PythonProject\\.venv\\NIPT_预测结果\\SO贪心算法_cache\\SO_scores_float32.npy",
+  "candidates": "E:\\PythonProject\\.venv\\NIPT_预测结果\\SO贪心算法_cache\\SO_cand_pos_top40_seed20260704_v2.npz",
+  "seed": 20260704,
+  "initialization": "shared_topn_score_desc_item_id_asc"
+}

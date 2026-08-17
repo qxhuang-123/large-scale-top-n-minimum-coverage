@@ -1,0 +1,13 @@
+{
+  "dataset": "TG",
+  "N": 10,
+  "mode": "TPCAR_INITIAL_ONLY",
+  "objective": 849787.793035984,
+  "total_recs": 194120,
+  "initial_D": 2426,
+  "items_with_candidates": 11709,
+  "scores": "E:\\PythonProject\\.venv\\NIPT_预测结果\\TG贪心算法_cache\\TG_scores_float32.npy",
+  "candidates": "E:\\PythonProject\\.venv\\NIPT_预测结果\\TG贪心算法_cache\\TG_cand_pos_top40_seed20260704_v2.npz",
+  "seed": 20260704,
+  "initialization": "shared_topn_score_desc_item_id_asc"
+}

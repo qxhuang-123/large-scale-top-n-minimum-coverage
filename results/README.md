@@ -1,14 +1,25 @@
-# Results policy
+# Reproducibility results
 
-The previous archived JSON/XLSX/CSV files were removed because their dataset
-shapes and initial coverages do not match Tables 2--5 of the submitted COR
-manuscript. Keeping them would make the repository appear reproducible while
-silently using a different preprocessing snapshot.
+The JSON files in this directory are the result artifacts used to reproduce
+the reported BGCR and TPCAR summaries. All current BGCR runs use the same
+candidate cache, candidate fraction `alpha=0.40`, seed `20260704`, and the
+deterministic tie rule: score descending, then item id ascending.
 
-Generate replacement results only after confirming the manuscript dataset
-shapes: OP 4,905 x 2,420; Yelp 9,464 x 11,197; VG 24,303 x 10,672;
-TG 19,412 x 11,924; SO 35,598 x 18,357. All five methods must use the same
-candidate cache, alpha=0.40, N=10, candidate universe I^alpha, and
-D_target=ceil(|I^alpha|*p/100). Results should include the metadata fields
-`dataset_shape`, `items_with_candidates`, `candidate_fraction`,
-`D_target_base`, and `D_target_rounding`.
+## BGCR
+
+`bgcr/OP/`, `bgcr/Yelp/`, `bgcr/VG/`, and `bgcr/TG/` each contain one complete
+JSON artifact for every `N` in `{10,15,20,25,30}`. `bgcr/SO/SO_N10_to_N30.json`
+contains the corresponding five `N` values in one file. These artifacts report
+the initial Top-N solution and the BGCR result at each nominal coverage target.
+
+## TPCAR at N=10
+
+`tpcar/n10/shared_initial/` contains the authoritative shared Top-N initial
+solution for every dataset. These files are the exact initialization records
+that match BGCR: they use the same score matrix, candidate cache, and tie rule.
+
+`tpcar/n10/archived_history/` retains the previous full TPCAR histories used
+for post-initial augmentation results. They are deliberately labelled
+`previous`: the historical runners predate the shared-initialization record on
+some datasets. Use the shared-initial files for the coverage-relaxed baseline
+and consult the archived histories only for the retained augmentation traces.

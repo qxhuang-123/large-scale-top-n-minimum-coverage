@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import time
 from pathlib import Path
 
@@ -30,6 +31,7 @@ DATASETS = {
         "data_path": Path(r"E:\Users\24qxh\Desktop\op\IUIC1_Rui_pred_user_item_FULL_display1.xlsx"),
         "candidate_fraction": 0.4,
     },
+
     "Yelp": {
         "scores": Path(r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat\work\yelp_cache\yelp_unknown_scores_float32.npy"),
         "candidates": Path(r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat\work\yelp_cache\yelp_cand_frac_0p4_seed20260704.npz"),
@@ -59,7 +61,7 @@ DATASETS = {
 
 if njit is not None:
 
-    @njit(cache=True)
+    @njit(cache=False)
     def _initial_topn_numba(num_users, num_items, user_indptr, user_items, user_scores, n):
         selected_items = np.full((num_users, n), -1, dtype=np.int32)
         selected_scores = np.zeros((num_users, n), dtype=np.float32)
@@ -74,13 +76,35 @@ if njit is not None:
             if length <= 0:
                 continue
             k = n if n < length else length
-            order = np.argsort(user_scores[s:e])[::-1]
-            for pos in range(k):
-                edge = s + order[pos]
+
+            # 与 TPCAR 完全相同：评分降序；评分相同时物品编号升序。
+            # 不能使用 argsort(...)[::-1]，因为它会让大量并列评分选择相反的物品。
+            filled = 0
+            for edge in range(s, e):
                 item = user_items[edge]
                 score = user_scores[edge]
-                selected_items[u, pos] = item
-                selected_scores[u, pos] = score
+                insert_at = filled
+                if insert_at > k:
+                    insert_at = k
+                for pos in range(filled if filled < k else k):
+                    old_score = selected_scores[u, pos]
+                    old_item = selected_items[u, pos]
+                    if score > old_score or (score == old_score and item < old_item):
+                        insert_at = pos
+                        break
+                if insert_at < k:
+                    last = filled if filled < k else k - 1
+                    for pos in range(last, insert_at, -1):
+                        selected_items[u, pos] = selected_items[u, pos - 1]
+                        selected_scores[u, pos] = selected_scores[u, pos - 1]
+                    selected_items[u, insert_at] = item
+                    selected_scores[u, insert_at] = score
+                if filled < k:
+                    filled += 1
+
+            for pos in range(k):
+                item = selected_items[u, pos]
+                score = selected_scores[u, pos]
                 counts[item] += 1
                 total_score += score
                 total_recs += 1
@@ -92,7 +116,7 @@ if njit is not None:
         return selected_items, selected_scores, counts, total_score, total_recs, diversity
 
 
-    @njit(cache=True)
+    @njit(cache=False)
     def _best_swap_for_item_numba(item, item_indptr, item_users, item_scores, selected_items, selected_scores, counts):
         n = selected_items.shape[1]
         best_loss = 1.0e30
@@ -127,7 +151,7 @@ if njit is not None:
         return best_loss, best_u, best_pos, best_add_score, best_remove_item
 
 
-    @njit(cache=True)
+    @njit(cache=False)
     def _batch_greedy_history_numba(
         num_items,
         item_indptr,
@@ -139,6 +163,7 @@ if njit is not None:
         initial_score,
         total_recs,
         initial_diversity,
+        target_d,
         history_interval,
         max_rounds,
     ):
@@ -158,7 +183,7 @@ if njit is not None:
         rounds = 0
         best_loss_by_item = np.empty(num_items, dtype=np.float64)
 
-        while rounds < max_rounds and diversity < num_items:
+        while rounds < max_rounds and diversity < target_d:
             rounds += 1
             for item in range(num_items):
                 if counts[item] > 0:
@@ -201,7 +226,7 @@ if njit is not None:
                     hist_d[hist_len] = diversity
                     hist_obj[hist_len] = total_score
                     hist_len += 1
-                if diversity >= num_items:
+                if diversity >= target_d:
                     break
 
             if changed == 0:
@@ -385,65 +410,103 @@ def run_dataset(dataset: str, n: int, history_interval: int, max_rounds: int):
     print(f"shape users={num_users}, items={num_items}", flush=True)
     print(f"candidate_edges={candidate_edges:,}, items_with_candidates={items_with_candidates}", flush=True)
 
-    t0 = time.time()
+    # 先触发 Numba 编译；与已编译的 TPCAR 扩展一致，编译时间不计入算法时间。
+    _initial_topn_numba(
+        1,
+        1,
+        np.asarray([0, 1], dtype=np.int64),
+        np.asarray([0], dtype=np.int32),
+        np.asarray([1.0], dtype=np.float32),
+        1,
+    )
+    _batch_greedy_history_numba(
+        1,
+        np.asarray([0, 1], dtype=np.int64),
+        np.asarray([0], dtype=np.int32),
+        np.asarray([1.0], dtype=np.float32),
+        np.asarray([[0]], dtype=np.int32),
+        np.asarray([[1.0]], dtype=np.float32),
+        np.asarray([1], dtype=np.int32),
+        1.0,
+        1,
+        1,
+        1,
+        1,
+        1,
+    )
+
+    # TPCAR 的计时从初始 top-N 开始，不包含读取缓存和构造 CSR 数组。
+    t0 = time.perf_counter()
     selected_items, selected_scores, counts, naive_obj, total_recs, naive_diversity = _initial_topn_numba(
         int(num_users), int(num_items), user_indptr, user_items, user_scores, int(n)
     )
-    naive_time = time.time() - t0
+    naive_time = time.perf_counter() - t0
     naive_pred = float(naive_obj) / total_recs if total_recs else 0.0
 
-    t1 = time.time()
-    pred, diversity, swaps, rounds, obj, hist_iter, hist_d, hist_obj = _batch_greedy_history_numba(
-        int(num_items),
-        item_indptr,
-        item_users,
-        item_scores,
-        selected_items,
-        selected_scores,
-        counts,
-        float(naive_obj),
-        int(total_recs),
-        int(naive_diversity),
-        int(history_interval),
-        int(max_rounds),
-    )
-    greedy_time = time.time() - t1
-    total_time = naive_time + greedy_time
-
-    if len(hist_iter) > 1 and hist_iter[-1] > 0:
-        times = naive_time + (hist_iter.astype(np.float64) / float(hist_iter[-1])) * greedy_time
-    else:
-        times = np.array([naive_time], dtype=np.float64)
-
+    # 每个名义 D 都从完全相同的 TPCAR 初始解出发，并在首次达到 D 时停止。
+    # 这样表 4 中的时间是每个 D 的真实运行时间，而不是按迭代比例估算。
     history_rows = []
-    for it, div, objective, elapsed in zip(hist_iter, hist_d, hist_obj, times):
+    percent_rows = []
+    final_result = None
+    for pct in D_PERCENTAGES:
+        d_target = int(math.ceil(items_with_candidates * pct / 100.0))
+        target_d = max(d_target, int(naive_diversity))
+        run_selected_items = selected_items.copy()
+        run_selected_scores = selected_scores.copy()
+        run_counts = counts.copy()
+
+        if naive_diversity >= target_d:
+            pred = naive_pred
+            diversity = int(naive_diversity)
+            swaps = 0
+            rounds = 0
+            obj = float(naive_obj)
+            greedy_time = 0.0
+        else:
+            t1 = time.perf_counter()
+            pred, diversity, swaps, rounds, obj, _, _, _ = _batch_greedy_history_numba(
+                int(num_items),
+                item_indptr,
+                item_users,
+                item_scores,
+                run_selected_items,
+                run_selected_scores,
+                run_counts,
+                float(naive_obj),
+                int(total_recs),
+                int(naive_diversity),
+                int(target_d),
+                int(history_interval),
+                int(max_rounds),
+            )
+            greedy_time = time.perf_counter() - t1
+
+        total_time = naive_time + greedy_time
+        row = {
+            "数据集": dataset,
+            "D比例": f"D-{pct}%",
+            "D_target": d_target,
+            "迭代次数": int(swaps),
+            "总体多样性": int(diversity),
+            "目标函数值": float(obj),
+            "准确多样性": float(obj) / total_recs if total_recs else 0.0,
+            "时间s": float(total_time),
+            "target_feasible": bool(int(diversity) >= d_target),
+        }
+        percent_rows.append(row)
         history_rows.append(
             {
                 "数据集": dataset,
-                "迭代次数": int(it),
-                "总体多样性": int(div),
-                "目标函数值": float(objective),
-                "时间s": float(elapsed),
+                "迭代次数": int(swaps),
+                "总体多样性": int(diversity),
+                "目标函数值": float(obj),
+                "时间s": float(total_time),
             }
         )
+        final_result = (pred, diversity, swaps, rounds, obj, total_time)
+        print(row, flush=True)
 
-    percent_rows = []
-    for pct in D_PERCENTAGES:
-        d_target = int(math.ceil(items_with_candidates * pct / 100.0))
-        idx = first_reached(hist_d, d_target)
-        percent_rows.append(
-            {
-                "数据集": dataset,
-                "D比例": f"D-{pct}%",
-                "D_target": d_target,
-                "迭代次数": int(hist_iter[idx]),
-                "总体多样性": int(hist_d[idx]),
-                "目标函数值": float(hist_obj[idx]),
-                "准确多样性": float(hist_obj[idx]) / total_recs if total_recs else 0.0,
-                "时间s": float(times[idx]),
-                "target_feasible": bool(int(hist_d[idx]) >= d_target),
-            }
-        )
+    pred, diversity, swaps, rounds, obj, total_time = final_result
 
     summary_rows = [
         {
@@ -458,7 +521,7 @@ def run_dataset(dataset: str, n: int, history_interval: int, max_rounds: int):
             "Naive总体多样性": int(naive_diversity),
             "迭代次数": int(swaps),
             "交换次数": int(swaps),
-            "target_feasible": bool(diversity >= num_items),
+            "target_feasible": bool(diversity >= items_with_candidates),
             "max_reached": int(diversity),
             "total_recs": int(total_recs),
         }
@@ -511,4 +574,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
