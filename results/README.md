@@ -23,3 +23,10 @@ for post-initial augmentation results. They are deliberately labelled
 `previous`: the historical runners predate the shared-initialization record on
 some datasets. Use the shared-initial files for the coverage-relaxed baseline
 and consult the archived histories only for the retained augmentation traces.
+
+`tpcar/n10/final_shared/` contains the final complete N=10 TPCAR result JSON
+artifacts for OP, Yelp, VG, and TG. They use the shared candidate sets,
+deterministic score-descending/item-id-ascending tie rule, shared Top-N
+initialization, and the target definition
+`D = ceil(q * |I^alpha|)`. Yelp's 100% nominal target is infeasible; its JSON
+therefore records the exact attained boundary coverage of 7,008.
