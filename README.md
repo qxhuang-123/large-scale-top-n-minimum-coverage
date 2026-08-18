@@ -3,7 +3,7 @@
 The paper uses the current `main` branch. The implementation is organized by method:
 
 - `methods/TPCAR/`: exact TPCAR runners for OP, Yelp, VG, TG, and SO.
-- `methods/BGCR/`: greedy BGCR runners for the five datasets.
+- `src/bgcr/`: current compiled C++ BGCR core, build entry point, and five-dataset runner.
 - `methods/MCF/`: minimum-cost-flow runners.
 - `methods/Gurobi/`: binary Gurobi models.
 - `methods/Gurobi-LP/`: the same totally-unimodular model solved as an LP relaxation.
@@ -20,5 +20,5 @@ schemas. Raw review data and predicted score matrices are not committed because
 of size and redistribution restrictions. Put the five datasets under
 `data/raw/<dataset>/` and configure paths in `config/datasets.yaml`.
 
-The old `legacy/` duplicate runner directory has been removed; use only the
-method directories above.
+Historical BGCR runners and superseded result artifacts have been removed; use
+the current source directories above.
