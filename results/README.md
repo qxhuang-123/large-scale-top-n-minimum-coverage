@@ -13,6 +13,12 @@ initialization (score descending, item id ascending) followed by the C++
 batched direct-reallocation heuristic at all six nominal coverage targets.
 The source and build entry points are in `src/bgcr/`.
 
+## MCF at N=10
+
+`mcf/n10/latest_run_status.md` records the latest shared-input explicit-network
+MCF rerun. The OP/Yelp and VG JSON output artifacts are retained alongside the
+run record; the SO transposed-matrix run is deliberately excluded.
+
 ## TPCAR at N=10
 
 `tpcar/n10/shared_initial/` contains the authoritative shared Top-N initial
