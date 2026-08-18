@@ -12,6 +12,14 @@ JSON artifact for every `N` in `{10,15,20,25,30}`. `bgcr/SO/SO_N10_to_N30.json`
 contains the corresponding five `N` values in one file. These artifacts report
 the initial Top-N solution and the BGCR result at each nominal coverage target.
 
+## C++ BGCR reruns
+
+`bgcr_cpp/{OP,Yelp,VG,TG,SO}/` contains the full C++-core BGCR reruns for
+every `N` in `{10,15,20,25,30}`.  Each artifact records deterministic Top-N
+initialization (score descending, item id ascending) followed by the C++
+batched direct-reallocation heuristic at all six nominal coverage targets.
+The source and build entry points are in `src/bgcr/`.
+
 ## TPCAR at N=10
 
 `tpcar/n10/shared_initial/` contains the authoritative shared Top-N initial
