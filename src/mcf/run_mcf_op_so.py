@@ -10,6 +10,7 @@ from pathlib import Path
 import numpy as np
 import openpyxl
 import pandas as pd
+from src.common.shared_experiment_inputs import ALPHA, D_PERCENTAGES, N, SEED, SHARED_INPUTS
 
 try:
     from ortools.graph.python import min_cost_flow
@@ -24,11 +25,7 @@ OUT_DIR = ROOT / "outputs" / "network_flow_N10_D_percent_results"
 OUT_XLSX = OUT_DIR / "network_flow_N10_D_percent_5datasets.xlsx"
 OUT_JSON = OUT_DIR / "network_flow_N10_D_percent_5datasets.json"
 
-N = 10
-ALPHA = 0.40
-D_PERCENTAGES = [0, 20, 40, 60, 80, 100]
 SCORE_SCALE = 1_000_000
-SEED = 20260704
 
 
 @dataclass(frozen=True)
@@ -43,66 +40,8 @@ class DatasetConfig:
 
 
 DATASETS: dict[str, DatasetConfig] = {
-    "OP": DatasetConfig(
-        name="OP",
-        scores_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4"
-            r"\work\op_exact_cache\op_full_scores_float32.npy"
-        ),
-        cand_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4"
-            r"\work\op_exact_cache\op_full_cand_frac_0p4_seed20260704.npz"
-        ),
-        source_path=Path(r"E:\Users\24qxh\Desktop\op\IUIC1_Rui_pred_user_item_FULL_display1.xlsx"),
-        source_kind="xlsx",
-    ),
-    "Yelp": DatasetConfig(
-        name="Yelp",
-        scores_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat"
-            r"\work\yelp_cache\yelp_unknown_scores_float32.npy"
-        ),
-        cand_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat"
-            r"\work\yelp_cache\yelp_cand_frac_0p4_seed20260704.npz"
-        ),
-        source_path=Path(r"E:\Users\24qxh\Desktop\Yelp\Yelp_R_ui_UNKNOWN_ONLY_known_ratings_0_display1.xlsx"),
-        source_kind="xlsx",
-    ),
-    "VG": DatasetConfig(
-        name="VG",
-        scores_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4"
-            r"\work\vg_exact_cache\vg_scores_float32.npy"
-        ),
-        cand_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4"
-            r"\work\vg_exact_cache\vg_cand_frac_0p4_seed20260704.npz"
-        ),
-        source_path=Path(r"E:\Users\24qxh\Desktop\VG\VG_R_ui_UNKNOWN_ONLY_known_ratings_0_display1_1.xlsx"),
-        source_kind="xlsx",
-    ),
-    "TG": DatasetConfig(
-        name="TG",
-        scores_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4"
-            r"\work\tg_exact_cache\tg_scores_float32.npy"
-        ),
-        cand_path=Path(
-            r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4"
-            r"\work\tg_exact_cache\tg_cand_frac_0p4_seed20260704.npz"
-        ),
-        source_path=Path(r"E:\Users\24qxh\Desktop\TG\TG_R_ui_UNKNOWN_ONLY_known_ratings_0.xlsx"),
-        source_kind="xlsx",
-    ),
-    "SO": DatasetConfig(
-        name="SO",
-        scores_path=ROOT / "work" / "network_flow_cache" / "so" / "so_scores_float32.npy",
-        cand_path=ROOT / "work" / "network_flow_cache" / "so" / "so_cand_frac_0p4_seed20260704.npz",
-        source_path=Path(r"E:\Users\24qxh\Desktop\SO"),
-        source_kind="csv_parts",
-        cache_dir=ROOT / "work" / "network_flow_cache" / "so",
-    ),
+    name: DatasetConfig(name=name, scores_path=spec.scores, cand_path=spec.candidates)
+    for name, spec in SHARED_INPUTS.items()
 }
 
 
@@ -226,16 +165,10 @@ def build_candidate_cache(scores: np.ndarray, cache_dir: Path, dataset_name: str
 def ensure_cache(cfg: DatasetConfig) -> tuple[Path, Path]:
     if cfg.scores_path and cfg.cand_path and cfg.scores_path.exists() and cfg.cand_path.exists():
         return cfg.scores_path, cfg.cand_path
-    if cfg.source_path is None or cfg.source_kind is None:
-        raise FileNotFoundError(f"No cache or source configured for {cfg.name}")
-    cache_dir = cfg.cache_dir or (ROOT / "work" / "network_flow_cache" / cfg.name.lower())
-    if cfg.source_kind == "xlsx":
-        scores = read_xlsx_matrix(cfg.source_path, cfg.sheet_name)
-    elif cfg.source_kind == "csv_parts":
-        scores = read_so_csv_parts(cfg.source_path)
-    else:
-        raise ValueError(f"Unsupported source_kind={cfg.source_kind}")
-    return build_candidate_cache(scores, cache_dir, cfg.name)
+    raise FileNotFoundError(
+        f"Shared cache missing for {cfg.name}. MCF must use the same immutable "
+        "score/candidate files as TPCAR and BGCR; rebuild the shared cache first."
+    )
 
 
 def load_candidate_arrays(scores: np.ndarray, cand_path: Path):

@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment, Font
+from src.common.shared_experiment_inputs import D_PERCENTAGES, N as DEFAULT_N, SEED, SHARED_INPUTS
 
 try:
     from numba import njit
@@ -23,44 +24,12 @@ sys.path.insert(0, str(SCRIPT_DIR))
 import yelp_greedy_core
 
 
-DEFAULT_N = 10
-D_PERCENTAGES = [0, 20, 40, 60, 80, 100]
-SEED = 20260704
 DEFAULT_HISTORY_INTERVAL = 50
 DEFAULT_MAX_ROUNDS = 1000
 
 DATASETS = {
-    "OP": {
-        "scores": Path(r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4\work\op_exact_cache\op_full_scores_float32.npy"),
-        "candidates": Path(r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4\work\op_exact_cache\op_full_cand_frac_0p4_seed20260704.npz"),
-        "data_path": Path(r"E:\Users\24qxh\Desktop\op\IUIC1_Rui_pred_user_item_FULL_display1.xlsx"),
-        "candidate_fraction": 0.4,
-    },
-
-    "Yelp": {
-        "scores": Path(r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat\work\yelp_cache\yelp_unknown_scores_float32.npy"),
-        "candidates": Path(r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat\work\yelp_cache\yelp_cand_frac_0p4_seed20260704.npz"),
-        "data_path": Path(r"E:\Users\24qxh\Desktop\Yelp_R_ui_UNKNOWN_ONLY_known_ratings_0_display1.xlsx"),
-        "candidate_fraction": 0.4,
-    },
-    "VG": {
-        "scores": SCRIPT_DIR / "VG贪心算法_cache" / "VG_scores_float32.npy",
-        "candidates": SCRIPT_DIR / "VG贪心算法_cache" / "VG_cand_pos_top40_seed20260704_v2.npz",
-        "data_path": Path(r"E:\Users\24qxh\Desktop\VG\VG_R_ui_FULL_display1.xlsx"),
-        "candidate_fraction": 0.4,
-    },
-    "TG": {
-        "scores": SCRIPT_DIR / "TG贪心算法_cache" / "TG_scores_float32.npy",
-        "candidates": SCRIPT_DIR / "TG贪心算法_cache" / "TG_cand_pos_top40_seed20260704_v2.npz",
-        "data_path": Path(r"E:\Users\24qxh\Desktop\TG_R_ui_UNKNOWN_ONLY_known_ratings_0.xlsx"),
-        "candidate_fraction": 0.4,
-    },
-    "SO": {
-        "scores": SCRIPT_DIR / "SO贪心算法_cache" / "SO_scores_float32.npy",
-        "candidates": SCRIPT_DIR / "SO贪心算法_cache" / "SO_cand_pos_top40_seed20260704_v2.npz",
-        "data_path": Path(r"E:\Users\24qxh\Desktop\SO"),
-        "candidate_fraction": 0.4,
-    },
+    name: {"scores": spec.scores, "candidates": spec.candidates, "candidate_fraction": 0.4}
+    for name, spec in SHARED_INPUTS.items()
 }
 
 

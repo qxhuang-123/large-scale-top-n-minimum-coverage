@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from src.common.initial_topn import initial_topn
+from src.common.shared_experiment_inputs import SHARED_INPUTS
 
 
 def load_candidate_arrays(scores: np.ndarray, path: Path):
@@ -29,14 +30,19 @@ def load_candidate_arrays(scores: np.ndarray, path: Path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dataset", required=True)
-    parser.add_argument("--scores", type=Path, required=True)
-    parser.add_argument("--candidates", type=Path, required=True)
+    parser.add_argument("--dataset", required=True, choices=sorted(SHARED_INPUTS))
+    parser.add_argument("--scores", type=Path)
+    parser.add_argument("--candidates", type=Path)
     parser.add_argument("--n", type=int, default=10)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
-    scores = np.load(args.scores, mmap_mode="r")
-    user_indptr, user_items, user_scores, item_indptr, _ = load_candidate_arrays(scores, args.candidates)
+    shared = SHARED_INPUTS[args.dataset]
+    scores_path = args.scores or shared.scores
+    candidates_path = args.candidates or shared.candidates
+    if (args.scores is None) != (args.candidates is None):
+        parser.error("Pass both --scores and --candidates, or neither to use the shared input contract.")
+    scores = np.load(scores_path, mmap_mode="r")
+    user_indptr, user_items, user_scores, item_indptr, _ = load_candidate_arrays(scores, candidates_path)
     _, _, _, objective, total_recs, diversity = initial_topn(
         scores.shape[0], scores.shape[1], user_indptr, user_items, user_scores, args.n
     )
@@ -47,6 +53,8 @@ def main():
         "initial_D": int(diversity), "total_recs": int(total_recs),
         "items_with_candidates": int(np.count_nonzero(np.diff(item_indptr) > 0)),
         "initialization": "score_desc_item_id_asc",
+        "scores_path": str(scores_path), "candidates_path": str(candidates_path),
+        "input_contract": "shared_tpcar_bgcr_mcf_v1",
     }
     output = args.output or Path("outputs") / "tpcar" / f"{args.dataset.lower()}_initial_N{args.n}.json"
     output.parent.mkdir(parents=True, exist_ok=True)

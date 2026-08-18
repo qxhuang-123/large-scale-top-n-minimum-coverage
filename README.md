@@ -13,6 +13,11 @@ All methods use `alpha=0.40`, `N=10`, candidate universe `I^alpha`, and
 (with the Top-N lower bound where applicable). Ties are score descending,
 then item id ascending.
 
+The authoritative score matrices and CSR candidate caches are declared once in
+`src/common/shared_experiment_inputs.py`. MCF, TPCAR initialisation, and C++
+BGCR load this same input contract; MCF intentionally fails if a shared cache
+is missing instead of creating a method-specific replacement.
+
 ## Data
 
 The repository contains code, configuration templates, checksums, and result
