@@ -21,9 +21,16 @@ is missing instead of creating a method-specific replacement.
 ## Data
 
 The repository contains code, configuration templates, checksums, and result
-schemas. Raw review data and predicted score matrices are not committed because
-of size and redistribution restrictions. Put the five datasets under
-`data/raw/<dataset>/` and configure paths in `config/datasets.yaml`.
+schemas. Dense LETTER score matrices are not committed to ordinary GitHub
+storage: several exceed GitHub's 100 MB per-file limit. Download public source
+data under its original terms and obtain the derived score matrices from the
+corresponding author or a data release. Place them under `data/raw/<dataset>/`
+using the filenames in `config/datasets.example.yaml`.
+
+Set `TOPN_DATA_ROOT` to a directory containing `raw/` and `processed/` (the
+default is this repository's `data/`). Run `python tools/prepare_shared_inputs.py`
+once. It creates the only score/candidate cache consumed by MCF, TPCAR and C++
+BGCR, so every solver uses identical inputs without machine-specific paths.
 
 Historical BGCR runners and superseded result artifacts have been removed; use
 the current source directories above.

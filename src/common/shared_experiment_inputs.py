@@ -1,11 +1,7 @@
-"""Authoritative input contract shared by TPCAR, BGCR, and MCF.
-
-Every method must load these *same immutable score and candidate-cache files*.
-The cache already encodes the alpha=0.40 screened graph and its deterministic
-candidate ordering; no solver is permitted to rebuild it implicitly.
-"""
+"""Portable input contract shared by TPCAR, BGCR, and MCF."""
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -22,30 +18,19 @@ class SharedDatasetInput:
     candidates: Path
 
 
-_BGCR_DIR = Path(r"E:\PythonProject\.venv\NIPT_预测结果")
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+DATA_ROOT = Path(os.environ.get("TOPN_DATA_ROOT", REPOSITORY_ROOT / "data")).resolve()
+PROCESSED_ROOT = DATA_ROOT / "processed"
 
-SHARED_INPUTS: dict[str, SharedDatasetInput] = {
-    "OP": SharedDatasetInput(
-        Path(r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4\work\op_exact_cache\op_full_scores_float32.npy"),
-        Path(r"C:\Users\24qxh\Documents\Codex\2026-07-05\import-json-import-sys-import-time-4\work\op_exact_cache\op_full_cand_frac_0p4_seed20260704.npz"),
-    ),
-    "Yelp": SharedDatasetInput(
-        Path(r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat\work\yelp_cache\yelp_unknown_scores_float32.npy"),
-        Path(r"C:\Users\24qxh\Documents\Codex\2026-07-04\new-chat\work\yelp_cache\yelp_cand_frac_0p4_seed20260704.npz"),
-    ),
-    "VG": SharedDatasetInput(
-        _BGCR_DIR / "VG贪心算法_cache" / "VG_scores_float32.npy",
-        _BGCR_DIR / "VG贪心算法_cache" / "VG_cand_pos_top40_seed20260704_v2.npz",
-    ),
-    "TG": SharedDatasetInput(
-        _BGCR_DIR / "TG贪心算法_cache" / "TG_scores_float32.npy",
-        _BGCR_DIR / "TG贪心算法_cache" / "TG_cand_pos_top40_seed20260704_v2.npz",
-    ),
-    "SO": SharedDatasetInput(
-        _BGCR_DIR / "SO贪心算法_cache" / "SO_scores_float32.npy",
-        _BGCR_DIR / "SO贪心算法_cache" / "SO_cand_pos_top40_seed20260704_v2.npz",
-    ),
-}
+def _processed(dataset: str) -> SharedDatasetInput:
+    folder = PROCESSED_ROOT / dataset.lower()
+    return SharedDatasetInput(
+        folder / "scores_float32.npy",
+        folder / f"candidates_alpha_0p4_seed{SEED}.npz",
+    )
+
+
+SHARED_INPUTS: dict[str, SharedDatasetInput] = {name: _processed(name) for name in ("OP", "Yelp", "VG", "TG", "SO")}
 
 
 def shared_input(dataset: str) -> SharedDatasetInput:

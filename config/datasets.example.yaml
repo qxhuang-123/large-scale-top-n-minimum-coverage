@@ -5,20 +5,21 @@ defaults:
 
 datasets:
   OP:
-    scores: data/raw/op/scores.xlsx
-    expected_shape: [4905, 2420]
+    scores: raw/op/IUIC1_Rui_pred_user_item_FULL_display1.xlsx
+    expected_shape: [4903, 2419]
   Yelp:
-    scores: data/raw/yelp/scores.xlsx
-    expected_shape: [9464, 11197]
+    scores: raw/yelp/Yelp_R_ui_UNKNOWN_ONLY_known_ratings_0_display1.xlsx
+    expected_shape: [9415, 9373]
   VG:
-    scores: data/raw/vg/scores.xlsx
-    expected_shape: [24303, 10672]
+    scores: raw/vg/VG_R_ui_UNKNOWN_ONLY_known_ratings_0_display1_1.xlsx
+    expected_shape: [24442, 10350]
   TG:
     scores: data/raw/tg/scores.xlsx
     expected_shape: [19412, 11924]
   SO:
     scores:
-      - data/raw/so/scores_part1.csv
-      - data/raw/so/scores_part2.csv
-      - data/raw/so/scores_part3.csv
+      - raw/so/SO_unobserved_R_ui_part1.csv
+      - raw/so/SO_unobserved_R_ui_part2.csv
+      - raw/so/SO_unobserved_R_ui_part3.csv
+    expected_shape: [35598, 18357]
 
