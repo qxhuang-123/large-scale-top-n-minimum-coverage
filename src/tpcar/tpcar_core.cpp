@@ -568,5 +568,23 @@ PYBIND11_MODULE(TPCAR_MODULE_NAME, m) {
         "D"_a,
         "progress_every"_a = 200
     );
+    // Public Top-N initializer: the same exact C++ path, with D=0.
+    m.def(
+        "run_initial_csr",
+        &run_exact_csr_impl,
+        "num_users"_a,
+        "num_items"_a,
+        "user_indptr"_a,
+        "user_items"_a,
+        "user_scores"_a,
+        "edge_users"_a,
+        "item_indptr"_a,
+        "item_users"_a,
+        "item_edges"_a,
+        "item_scores"_a,
+        "N"_a,
+        "D"_a = 0,
+        "progress_every"_a = 0
+    );
 }
 
