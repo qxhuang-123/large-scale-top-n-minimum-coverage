@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\caption{Core-time module ablation on five datasets (first run).}
+\label{tab:T06_module_ablation_r1}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrrrr@{}}
+\toprule
+\multirow{2}{*}{Dataset} & \multicolumn{4}{c}{TPCA core time (s)} & \multicolumn{4}{c}{DGCA core time (s)} \\
+\cmidrule(lr){2-5}\cmidrule(l){6-9}
+ & Full & -Src & -Term & -Heap & Full & -Src & -Term & -Heap \\
+\midrule
+OP & 0.160 & 0.232 & 0.145 & 3.331 & 0.034 & 0.038 & 0.143 & 0.117 \\
+Yelp & 8.435 & 17.465 & 44.756 & 1367.613 & 0.089 & 0.085 & 0.246 & 0.697 \\
+VG & 13.004 & 53.833 & 25.230 & TL & 0.738 & 0.755 & 7.391 & 3.086 \\
+TG & 2.975 & 13.058 & 2.998 & 9.500 & 0.210 & 0.230 & 0.454 & 1.916 \\
+SO & MG & MG & MG & TL & 9.850 & 9.948 & 745.566 & 72.706 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{.98\textwidth}\footnotesize
+\textit{Note:} First run of each matched configuration, $N=10$, $D=|I|$. -Src/-Term remove donor/terminal aggregation; -Heap replaces heap selection by scans. MG: memory guard; TL: 1,800-second limit. All TPCA variants retain local tree repair. Completed variants preserve terminal coverage and integer objective within each algorithm and dataset. Construction-plus-core time and peak working set are reported in Table S1.
+\end{minipage}
+\end{table*}

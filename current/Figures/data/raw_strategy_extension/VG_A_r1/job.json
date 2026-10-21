@@ -1,0 +1,19 @@
+{
+  "dataset": "VG",
+  "method": "BGCR",
+  "N": 10,
+  "D": 10014,
+  "percentage": 100,
+  "graph_folder": "E:\\PythonProject\\TRMNL_BENCH\\data\\VG\\graph_34cfd079291548f7b6f9bec3798ac41d",
+  "graph_id": "0188cfed7fa6f0dba4635254b33208ed1a648a8c212e0e83462b753e78a3470a",
+  "initial_coverage": 1251,
+  "initial_integer_objective": 1184136179922,
+  "backend_sha256": "f47819f2f464073ce9f2c5edd616c9fb5999b833a9ca1b5f742d73f5cf4caf1d",
+  "timeout_seconds": 1800.0,
+  "private_limit_gib": 12.0,
+  "reserve_gib": 1.0,
+  "variant": "A",
+  "native_mode": "original",
+  "repeat": 1,
+  "seed": 0
+}

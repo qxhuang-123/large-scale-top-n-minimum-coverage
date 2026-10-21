@@ -1,0 +1,21 @@
+{
+  "original_project_unchanged": true,
+  "original_source_sha256": {
+    "state_variants.cpp": "811d3afd6c49d86b45017a5e5562dcb92c97b02f519509e5fbd655481a165c29",
+    "state_repair_impl.inc": "04f35bc7852c6972719f47a1af13af680e01b955293934f57b018b1c124a6ddc",
+    "local_repair_impl.inc": "f17e806bd87cb2f0ef8ea67aee4c1b7ed56733517222fea31fa68c0452aed5ea",
+    "msvc_compat.h": "c60bb91a1c953f60be3a0817697dfab2adf7f6b35c2571c05a7016a88cc67b12"
+  },
+  "changes": [
+    "Separate module name",
+    "Remove redundant item_scores input/storage",
+    "Read reverse weights through original edge IDs"
+  ],
+  "state_source_algorithm": "same original coverage compression, heaps, local repair and augmentation",
+  "derived_source_sha256": {
+    "local_repair_impl.inc": "593979efff7c0591b1a977d572d79afac42a855958a7792c9ac16b9cd06fd622",
+    "msvc_compat.h": "4b27cf8e3fd23b846ca908014d2894d33c194d900838c4ad247f7aee561c6691",
+    "state_repair_impl.inc": "35122371ffe78ccda9c5a2ea275f7875b4955067fb7cc862f514e4916add4b0c",
+    "state_variants.cpp": "4fe9d84b30433739f9400604707cff0883113519d801ab75ff37f3705be4e833"
+  }
+}

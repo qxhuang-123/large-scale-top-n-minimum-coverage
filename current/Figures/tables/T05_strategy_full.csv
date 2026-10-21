@@ -1,0 +1,26 @@
+﻿Dataset,Variant,K,Loss (%),Core (s),Total (s)
+OP,R: Random scan,"2,367",0.0209,0.023,0.450
+OP,A: Fixed / slot scan,"2,367",0.0218,0.176,0.596
+OP,B: Fixed / donor agg.,"2,367",0.0218,0.043,0.558
+OP,C: Dynamic / item heap,"2,367",0.0218,0.054,0.505
+OP,D: DGCA,"2,367",0.0218,0.041,0.181
+Yelp,R: Random scan,"6,976",0.5112,0.637,4.939
+Yelp,A: Fixed / slot scan,"6,934",0.5157,6.784,9.446
+Yelp,B: Fixed / donor agg.,"6,934",0.5157,1.213,3.794
+Yelp,C: Dynamic / item heap,"6,937",0.5158,2.418,5.049
+Yelp,D: DGCA,"6,937",0.5158,0.104,0.611
+VG,R: Random scan,"9,995",0.0527,3.376,26.395
+VG,A: Fixed / slot scan,"9,988",0.0551,7.929,15.651
+VG,B: Fixed / donor agg.,"9,988",0.0551,1.986,12.252
+VG,C: Dynamic / item heap,"9,988",0.0559,7.737,28.763
+VG,D: DGCA,"9,988",0.0559,0.715,1.977
+TG,R: Random scan,"11,708",0.2371,0.734,9.889
+TG,A: Fixed / slot scan,"11,700",0.2369,6.367,13.189
+TG,B: Fixed / donor agg.,"11,700",0.2369,1.426,8.267
+TG,C: Dynamic / item heap,"11,699",0.2368,1.976,8.796
+TG,D: DGCA,"11,699",0.2368,0.215,1.501
+SO,R: Random scan,"17,945",0.0285,4.649,77.581
+SO,A: Fixed / slot scan,"17,935",0.0286,42.318,102.522
+SO,B: Fixed / donor agg.,"17,935",0.0286,9.017,70.819
+SO,C: Dynamic / item heap,"17,935",0.0286,9.554,71.453
+SO,D: DGCA,"17,935",0.0286,27.528,34.438

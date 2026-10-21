@@ -1,0 +1,18 @@
+{
+  "supplied_source_sha256": "06f2b19116e6ac7a95a4fef5beebbc4d004417a1531b34704dbead1cf6082d7b",
+  "changes": [
+    "Separate module name; Windows build",
+    "Reverse score lookup through original edge IDs, no duplicate reverse scores",
+    "Forward-only entry for dynamic user modes; no dummy reverse graph",
+    "Explicit one-module-off variants: donor-slot scan, full terminal-row scan, full active-user scan"
+  ],
+  "derived_source_sha256": "786af447a2adabb804b61060f57a14ebb33856916923304734ffd02ee66e4117",
+  "baseline_implementation_not_overwritten": true,
+  "compiler_flags": [
+    "/O2",
+    "/DNDEBUG",
+    "/std:c++17",
+    "/EHsc"
+  ],
+  "binary_sha256": "f47819f2f464073ce9f2c5edd616c9fb5999b833a9ca1b5f742d73f5cf4caf1d"
+}

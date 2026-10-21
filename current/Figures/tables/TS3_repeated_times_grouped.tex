@@ -1,0 +1,103 @@
+\begin{table*}[!t]
+\centering
+\caption{Repeated total optimization times.}\label{tab:repeat-times}
+\fontsize{8}{9}\selectfont
+\renewcommand{\arraystretch}{.92}
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrrrr@{}}
+\toprule
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{Algorithm} & \multirow{2}{*}{Run} & \multicolumn{6}{c}{Total time (s) at coverage target $\rho$}\\
+\cmidrule(l){4-9}
+ & & & 0\% & 20\% & 40\% & 60\% & 80\% & 100\%\\
+\midrule
+\multirow{20}{*}{OP} & \multirow{4}{*}{Gurobi} & 1 & 48.469 & 101.026 & 184.121 & 178.285 & 186.624 & 118.242 \\
+ &  & 2 & 47.421 & 61.528 & 155.840 & 178.108 & 184.809 & 43.167 \\
+ &  & 3 & 48.674 & 155.080 & 177.857 & 182.023 & 159.354 & 61.772 \\
+ &  & \textbf{Median} & \textbf{48.469} & \textbf{101.026} & \textbf{177.857} & \textbf{178.285} & \textbf{184.809} & \textbf{61.772} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{Gurobi-LP} & 1 & 31.537 & 92.525 & 100.778 & 115.026 & 112.011 & 52.796 \\
+ &  & 2 & 31.367 & 96.508 & 99.403 & 112.737 & 101.498 & 59.986 \\
+ &  & 3 & 33.105 & 91.125 & 92.530 & 114.298 & 110.944 & 101.586 \\
+ &  & \textbf{Median} & \textbf{31.537} & \textbf{92.525} & \textbf{99.403} & \textbf{114.298} & \textbf{110.944} & \textbf{59.986} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{MCF} & 1 & 2.117 & 2.273 & 2.265 & 2.306 & 2.423 & 2.486 \\
+ &  & 2 & 2.076 & 2.244 & 2.249 & 2.291 & 2.366 & 2.517 \\
+ &  & 3 & 2.077 & 2.237 & 2.272 & 2.316 & 2.417 & 2.381 \\
+ &  & \textbf{Median} & \textbf{2.077} & \textbf{2.244} & \textbf{2.265} & \textbf{2.306} & \textbf{2.417} & \textbf{2.486} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{TPCA} & 1 & 0.448 & 0.435 & 0.470 & 0.487 & 0.534 & 0.721 \\
+ &  & 2 & 0.448 & 0.444 & 0.476 & 0.511 & 0.531 & 0.594 \\
+ &  & 3 & 0.448 & 0.469 & 0.463 & 0.527 & 0.550 & 0.570 \\
+ &  & \textbf{Median} & \textbf{0.448} & \textbf{0.444} & \textbf{0.470} & \textbf{0.511} & \textbf{0.534} & \textbf{0.594} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{DGCA} & 1 & 0.124 & 0.125 & 0.127 & 0.141 & 0.144 & 0.155 \\
+ &  & 2 & 0.123 & 0.119 & 0.128 & 0.141 & 0.151 & 0.155 \\
+ &  & 3 & 0.126 & 0.122 & 0.126 & 0.136 & 0.144 & 0.157 \\
+ &  & \textbf{Median} & \textbf{0.124} & \textbf{0.122} & \textbf{0.127} & \textbf{0.141} & \textbf{0.144} & \textbf{0.155} \\
+\specialrule{0.35pt}{1.8pt}{1.8pt}
+\multirow{12}{*}{Yelp} & \multirow{4}{*}{MCF} & 1 & 12.229 & 13.880 & 13.225 & 13.419 & 14.150 & 4.706 \\
+ &  & 2 & 24.526 & 14.010 & 13.169 & 13.534 & 14.534 & 4.581 \\
+ &  & 3 & 12.069 & 13.513 & 13.183 & 13.590 & 13.968 & 4.506 \\
+ &  & \textbf{Median} & \textbf{12.229} & \textbf{13.880} & \textbf{13.183} & \textbf{13.534} & \textbf{14.150} & \textbf{4.581} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{TPCA} & 1 & 2.844 & 3.269 & 4.277 & 6.320 & 9.434 & 10.706 \\
+ &  & 2 & 2.963 & 3.142 & 4.164 & 6.408 & 9.045 & 10.731 \\
+ &  & 3 & 2.885 & 3.158 & 4.148 & 6.293 & 9.046 & 10.546 \\
+ &  & \textbf{Median} & \textbf{2.885} & \textbf{3.158} & \textbf{4.164} & \textbf{6.320} & \textbf{9.046} & \textbf{10.706} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{DGCA} & 1 & 0.495 & 0.501 & 0.539 & 0.547 & 0.549 & 0.599 \\
+ &  & 2 & 0.531 & 0.504 & 0.590 & 0.554 & 0.568 & 0.587 \\
+ &  & 3 & 0.519 & 0.511 & 0.514 & 0.519 & 0.553 & 0.596 \\
+ &  & \textbf{Median} & \textbf{0.519} & \textbf{0.504} & \textbf{0.539} & \textbf{0.547} & \textbf{0.553} & \textbf{0.596} \\
+\specialrule{0.35pt}{1.8pt}{1.8pt}
+\multirow{12}{*}{VG} & \multirow{4}{*}{MCF} & 1 & 192.826 & 211.239 & 132.414 & 51.948 & 53.791 & 55.307 \\
+ &  & 2 & 198.367 & 179.979 & 51.250 & 52.101 & 53.493 & 55.278 \\
+ &  & 3 & 172.682 & 205.989 & 132.189 & 52.519 & 53.799 & 54.413 \\
+ &  & \textbf{Median} & \textbf{192.826} & \textbf{205.989} & \textbf{132.189} & \textbf{52.101} & \textbf{53.791} & \textbf{55.278} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{TPCA} & 1 & 7.687 & 8.319 & 9.684 & 12.627 & 17.286 & 18.796 \\
+ &  & 2 & 7.709 & 8.405 & 9.765 & 12.631 & 17.331 & 18.640 \\
+ &  & 3 & 7.840 & 8.363 & 9.844 & 12.503 & 17.735 & 18.827 \\
+ &  & \textbf{Median} & \textbf{7.709} & \textbf{8.363} & \textbf{9.765} & \textbf{12.627} & \textbf{17.331} & \textbf{18.796} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{DGCA} & 1 & 1.335 & 1.484 & 1.551 & 1.927 & 2.155 & 2.112 \\
+ &  & 2 & 1.355 & 1.459 & 1.564 & 1.945 & 2.060 & 2.140 \\
+ &  & 3 & 1.348 & 1.396 & 1.577 & 1.748 & 2.093 & 2.522 \\
+ &  & \textbf{Median} & \textbf{1.348} & \textbf{1.459} & \textbf{1.564} & \textbf{1.927} & \textbf{2.093} & \textbf{2.140} \\
+\specialrule{0.35pt}{1.8pt}{1.8pt}
+\multirow{12}{*}{TG} & \multirow{4}{*}{MCF} & 1 & 33.296 & 34.356 & 34.834 & 35.011 & 36.431 & 36.979 \\
+ &  & 2 & 33.424 & 35.014 & 35.427 & 35.177 & 35.382 & 38.117 \\
+ &  & 3 & 33.423 & 34.163 & 35.976 & 34.741 & 36.083 & 37.558 \\
+ &  & \textbf{Median} & \textbf{33.423} & \textbf{34.356} & \textbf{35.427} & \textbf{35.011} & \textbf{36.083} & \textbf{37.558} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{TPCA} & 1 & 7.027 & 7.003 & 8.076 & 9.328 & 9.156 & 9.370 \\
+ &  & 2 & 7.037 & 7.106 & 8.115 & 9.272 & 9.139 & 9.502 \\
+ &  & 3 & 6.981 & 7.019 & 8.166 & 8.645 & 9.282 & 9.395 \\
+ &  & \textbf{Median} & \textbf{7.027} & \textbf{7.019} & \textbf{8.115} & \textbf{9.272} & \textbf{9.156} & \textbf{9.395} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{DGCA} & 1 & 1.259 & 1.328 & 1.349 & 1.321 & 1.383 & 1.458 \\
+ &  & 2 & 1.437 & 1.271 & 1.357 & 1.418 & 1.542 & 1.458 \\
+ &  & 3 & 1.228 & 1.232 & 1.361 & 1.327 & 1.406 & 1.457 \\
+ &  & \textbf{Median} & \textbf{1.259} & \textbf{1.271} & \textbf{1.357} & \textbf{1.327} & \textbf{1.406} & \textbf{1.458} \\
+\specialrule{0.35pt}{1.8pt}{1.8pt}
+\multirow{12}{*}{SO} & \multirow{4}{*}{MCF} & 1 & MG & MG & MG & MG & MG & MG \\
+ &  & 2 & -- & -- & -- & -- & -- & -- \\
+ &  & 3 & -- & -- & -- & -- & -- & -- \\
+ &  & \textbf{Median} & \textbf{--} & \textbf{--} & \textbf{--} & \textbf{--} & \textbf{--} & \textbf{--} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{TPCA} & 1 & 19.802 & 21.594 & 110.459 & 224.988 & 340.057 & 199.467 \\
+ &  & 2 & 19.835 & 21.447 & 171.836 & 207.083 & 383.509 & 144.718 \\
+ &  & 3 & 20.212 & 21.195 & 30.961 & 218.971 & 241.103 & 357.783 \\
+ &  & \textbf{Median} & \textbf{19.835} & \textbf{21.447} & \textbf{110.459} & \textbf{218.971} & \textbf{340.057} & \textbf{199.467} \\
+\addlinespace[1pt]
+ & \multirow{4}{*}{DGCA} & 1 & 3.132 & 3.312 & 6.097 & 26.339 & 25.833 & 19.983 \\
+ &  & 2 & 3.040 & 3.268 & 5.694 & 26.620 & 18.682 & 13.272 \\
+ &  & 3 & 3.315 & 3.717 & 5.981 & 11.870 & 36.078 & 13.903 \\
+ &  & \textbf{Median} & \textbf{3.132} & \textbf{3.312} & \textbf{5.981} & \textbf{26.339} & \textbf{25.833} & \textbf{13.903} \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{.98\textwidth}\footnotesize
+\textit{Note:} Total includes construction and solution. Main comparisons use Run 1; bold rows report medians of completed runs. MG denotes a memory-guard stop; -- denotes an unattempted run or an unavailable median. Full statuses and the separate construction/core times are retained in the CSV.
+\end{minipage}
+\end{table*}

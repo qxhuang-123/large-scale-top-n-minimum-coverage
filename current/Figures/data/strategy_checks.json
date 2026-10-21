@@ -1,0 +1,62 @@
+[
+  {
+    "dataset": "OP",
+    "same_inputs": true,
+    "equivalent_event_pairs": [
+      "A=B events verified",
+      "C=D events verified"
+    ],
+    "random_seeds_completed": [
+      2026101901,
+      2026101902,
+      2026101903,
+      2026101904,
+      2026101905,
+      2026101906,
+      2026101907,
+      2026101908,
+      2026101909,
+      2026101910
+    ]
+  },
+  {
+    "dataset": "SO",
+    "same_inputs": true,
+    "equivalent_event_pairs": [
+      "A=B events verified",
+      "C=D events verified"
+    ],
+    "random_seeds_completed": [
+      2026101901,
+      2026101902,
+      2026101903,
+      2026101904,
+      2026101905,
+      2026101906,
+      2026101907,
+      2026101908,
+      2026101909,
+      2026101910
+    ]
+  },
+  {
+    "dataset": "YELP",
+    "same_inputs": true,
+    "equivalent_event_pairs": [
+      "A=B events verified",
+      "C=D events verified"
+    ],
+    "random_seeds_completed": [
+      2026101901,
+      2026101902,
+      2026101903,
+      2026101904,
+      2026101905,
+      2026101906,
+      2026101907,
+      2026101908,
+      2026101909,
+      2026101910
+    ]
+  }
+]

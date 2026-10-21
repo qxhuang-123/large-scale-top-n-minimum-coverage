@@ -1,0 +1,15 @@
+{
+  "flags": [
+    "-O3",
+    "-DNDEBUG",
+    "-std=c++17",
+    "-shared",
+    "-fPIC"
+  ],
+  "sha256": {
+    "vendor/tpcar_variants_previous.cpp": "688528b2d7964a4107423e0bddcf81f65495cfca0de360f275aaf41878cd1638",
+    "local_repair_impl.inc": "f17e806bd87cb2f0ef8ea67aee4c1b7ed56733517222fea31fa68c0452aed5ea",
+    "state_repair_impl.inc": "04f35bc7852c6972719f47a1af13af680e01b955293934f57b018b1c124a6ddc",
+    "state_variants.cpp": "de57a61d5abb41cb97f6ec3c66c37e3af0538790cb9222ffa3ed4bd84e4e9310"
+  }
+}

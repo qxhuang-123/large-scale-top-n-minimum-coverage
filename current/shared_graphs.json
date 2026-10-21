@@ -1,0 +1,42 @@
+[
+  {
+    "dataset": "OP",
+    "graph_id": "3584b4ad0d3bf3299efca34bfe4bf74b438fd3933ab8eea591d419922b52a420",
+    "users": 4903,
+    "items": 2419,
+    "edges": 4746104,
+    "folder": "TPCA/data/OP/graph_b19cd3d99b754b658177d6942c9f4fb1"
+  },
+  {
+    "dataset": "YELP",
+    "graph_id": "436f0408bc83de4ae6e2b81e2bf11532d671881cb49b5e2e90f50493722880cc",
+    "users": 9415,
+    "items": 9373,
+    "edges": 35243883,
+    "folder": "TPCA/data/YELP/graph_694cd3f19dfb45d6ac7516a7202a9a36"
+  },
+  {
+    "dataset": "VG",
+    "graph_id": "0188cfed7fa6f0dba4635254b33208ed1a648a8c212e0e83462b753e78a3470a",
+    "users": 24442,
+    "items": 10350,
+    "edges": 101111454,
+    "folder": "TPCA/data/VG/graph_34cfd079291548f7b6f9bec3798ac41d"
+  },
+  {
+    "dataset": "TG",
+    "graph_id": "3e7aab461ba11fc218c78a3716763e50eca241b092648502eae25a4da06ef62c",
+    "users": 19412,
+    "items": 11924,
+    "edges": 92529265,
+    "folder": "TPCA/data/TG/graph_f1edb9c941f4436eaa68c44cf5663a29"
+  },
+  {
+    "dataset": "SO",
+    "graph_id": "2bba180fedf03a068da83451d47293b29cfc80d0dcbe0989326d75b34f169833",
+    "users": 35598,
+    "items": 18357,
+    "edges": 261282620,
+    "folder": "TPCA/data/SO/graph_198428a238a048a6b0940f7a3a91d233"
+  }
+]

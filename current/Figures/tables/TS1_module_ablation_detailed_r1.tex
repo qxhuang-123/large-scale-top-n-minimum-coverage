@@ -1,0 +1,43 @@
+\begin{table*}[t]
+\centering
+\caption{Implementation-module comparison on five graphs (first run).}
+\label{tab:TS1_module_ablation_detailed_r1}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrrr@{}}
+\toprule
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{Variant} & \multicolumn{3}{c}{TPCA} & \multicolumn{3}{c}{DGCA} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-8}
+ &  & Core (s) & Total (s) & Peak (GiB) & Core (s) & Total (s) & Peak (GiB) \\
+\midrule
+\multirow{4}{*}{OP} & Full & 0.160 & 0.663 & 0.195 & 0.034 & 0.155 & 0.114 \\
+ & -Src & 0.232 & 0.677 & 0.195 & 0.038 & 0.155 & 0.114 \\
+ & -Term & 0.145 & 0.583 & 0.195 & 0.143 & 0.269 & 0.114 \\
+ & -Heap & 3.331 & 3.772 & 0.175 & 0.117 & 0.238 & 0.114 \\
+\addlinespace[4pt]
+\multirow{4}{*}{Yelp} & Full & 8.435 & 11.754 & 1.483 & 0.089 & 0.599 & 0.587 \\
+ & -Src & 17.465 & 20.224 & 1.482 & 0.085 & 0.562 & 0.588 \\
+ & -Term & 44.756 & 47.372 & 1.494 & 0.246 & 0.718 & 0.587 \\
+ & -Heap & 1367.613 & 1370.434 & 0.991 & 0.697 & 1.191 & 0.587 \\
+\addlinespace[4pt]
+\multirow{4}{*}{VG} & Full & 13.004 & 21.117 & 3.982 & 0.738 & 2.112 & 1.627 \\
+ & -Src & 53.833 & 75.296 & 3.978 & 0.755 & 2.041 & 1.627 \\
+ & -Term & 25.230 & 47.263 & 3.991 & 7.391 & 8.767 & 1.627 \\
+ & -Heap & TL & TL & TL & 3.086 & 4.399 & 1.627 \\
+\addlinespace[4pt]
+\multirow{4}{*}{TG} & Full & 2.975 & 18.574 & 3.513 & 0.210 & 1.458 & 1.479 \\
+ & -Src & 13.058 & 37.296 & 3.512 & 0.230 & 1.497 & 1.479 \\
+ & -Term & 2.998 & 12.048 & 3.514 & 0.454 & 1.596 & 1.480 \\
+ & -Heap & 9.500 & 16.764 & 2.546 & 1.916 & 3.116 & 1.479 \\
+\addlinespace[4pt]
+\multirow{4}{*}{SO} & Full & MG & MG & MG & 9.850 & 19.983 & 4.057 \\
+ & -Src & MG & MG & MG & 9.948 & 13.164 & 4.056 \\
+ & -Term & MG & MG & MG & 745.566 & 748.474 & 4.057 \\
+ & -Heap & TL & TL & TL & 72.706 & 78.631 & 4.056 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{.98\textwidth}\footnotesize
+\textit{Note:} First run of each matched module configuration, $N=10$, $D=|I|$. Total is method construction plus core time; Peak is that run\textquotesingle s peak working set. MG: memory guard; TL: 1,800-second limit. No completed metrics are assigned to stopped attempts. -Src/-Term remove donor/terminal aggregation. -Heap replaces TPCA boundary heaps by scans or DGCA user-heap selection by user scans. All TPCA variants retain local tree repair. Completed variants agree in coverage and integer objective within each algorithm and dataset. SO TPCA stopped attempts are not replaced with results from another batch.
+\end{minipage}
+\end{table*}

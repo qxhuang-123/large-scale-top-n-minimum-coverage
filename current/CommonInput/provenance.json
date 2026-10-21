@@ -1,0 +1,43 @@
+{
+  "algorithm": "F",
+  "engine_mode": "state_source",
+  "date": "2026-10-17",
+  "source_archive": "Yelp_state_structure_ablation.zip",
+  "core_sources": {
+    "src/state_variants.cpp": {
+      "sha256": "de57a61d5abb41cb97f6ec3c66c37e3af0538790cb9222ffa3ed4bd84e4e9310",
+      "identical_to_previous_yelp": true
+    },
+    "src/state_repair_impl.inc": {
+      "sha256": "04f35bc7852c6972719f47a1af13af680e01b955293934f57b018b1c124a6ddc",
+      "identical_to_previous_yelp": true
+    },
+    "src/local_repair_impl.inc": {
+      "sha256": "f17e806bd87cb2f0ef8ea67aee4c1b7ed56733517222fea31fa68c0452aed5ea",
+      "identical_to_previous_yelp": true
+    }
+  },
+  "added_interfaces": [
+    "f_algorithm.py",
+    "run_f.py",
+    "setup.py",
+    "validate_f.py"
+  ],
+  "features": {
+    "local_repair": true,
+    "exact_boundary_heap": true,
+    "source_aggregation": true,
+    "terminal_aggregation": true,
+    "activation_index": false,
+    "intersection_index": false
+  },
+  "validation_environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pybind11": "3.1.0",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+  },
+  "historical_yelp_rerun_for_this_delivery": false
+}

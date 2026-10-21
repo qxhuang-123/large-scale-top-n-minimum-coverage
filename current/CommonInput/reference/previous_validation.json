@@ -1,0 +1,23 @@
+{
+  "instances": 240,
+  "modes": [
+    "repair_forward",
+    "repair_heap",
+    "state_terminal_scan",
+    "state_terminal",
+    "state_source",
+    "state_active",
+    "state_terminal_active",
+    "state_source_only"
+  ],
+  "lp_states": 835,
+  "lp_infeasible": 110,
+  "max_lp_error": 5.684341886080802e-14,
+  "solution_audits": 6930,
+  "source_class_changes": 281,
+  "source_dirty_max": 2,
+  "compressed_repair_components_max": 3,
+  "terminal_refreshes": 568,
+  "heap_refreshes": 73,
+  "lifted_certificate_checks": 880
+}

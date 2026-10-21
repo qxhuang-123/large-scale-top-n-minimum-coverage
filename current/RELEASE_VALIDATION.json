@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "scope": "Native builds and small synthetic graphs only; no paper-scale reruns",
+  "checks": {
+    "TPCA/validation/adapter_validation.json": {
+      "instances": 12,
+      "adapter_calls": 58,
+      "max_integer_objective_error": 0,
+      "passed": true
+    },
+    "TPCA/validation/ablation_20261018/validation.json": {
+      "instances": 200,
+      "calls": 2076,
+      "full_backend_equivalence_calls": 519,
+      "max_integer_objective_error": 0,
+      "passed": true
+    },
+    "TPCA/validation/progressive_20261018/validation.json": {
+      "instances": 100,
+      "calls": 1044,
+      "full_backend_equivalence_calls": 261,
+      "max_integer_objective_error": 0,
+      "passed": true
+    },
+    "DGCA/validation/small_validation.json": {
+      "passed": true,
+      "graphs": 200,
+      "adapter_calls": 4128,
+      "supplied_equivalence_checks": 2064,
+      "terminal_global_half_bound_checks": 200
+    },
+    "DGCA/validation/strategy_20261019/validation.json": {
+      "passed": true,
+      "graphs": 120,
+      "native_calls": 6061,
+      "random_seed_cases": 957
+    }
+  }
+}

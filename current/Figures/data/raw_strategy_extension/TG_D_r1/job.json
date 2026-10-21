@@ -1,0 +1,19 @@
+{
+  "dataset": "TG",
+  "method": "BGCR",
+  "N": 10,
+  "D": 11709,
+  "percentage": 100,
+  "graph_folder": "E:\\PythonProject\\TRMNL_BENCH\\data\\TG\\graph_f1edb9c941f4436eaa68c44cf5663a29",
+  "graph_id": "3e7aab461ba11fc218c78a3716763e50eca241b092648502eae25a4da06ef62c",
+  "initial_coverage": 2426,
+  "initial_integer_objective": 849787793100,
+  "backend_sha256": "f47819f2f464073ce9f2c5edd616c9fb5999b833a9ca1b5f742d73f5cf4caf1d",
+  "timeout_seconds": 1800.0,
+  "private_limit_gib": 12.0,
+  "reserve_gib": 1.0,
+  "variant": "D",
+  "native_mode": "dynamic_user_heap",
+  "repeat": 1,
+  "seed": 0
+}

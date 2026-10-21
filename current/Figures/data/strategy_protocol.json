@@ -1,0 +1,66 @@
+{
+  "variants": {
+    "R": "random_source",
+    "A": "original",
+    "B": "fixed_source",
+    "C": "dynamic_item_heap",
+    "D": "dynamic_user_heap"
+  },
+  "datasets": [
+    "OP",
+    "YELP",
+    "SO"
+  ],
+  "N": 10,
+  "target": "candidate item union C",
+  "deterministic_repeats": 3,
+  "random_seeds": [
+    2026101901,
+    2026101902,
+    2026101903,
+    2026101904,
+    2026101905,
+    2026101906,
+    2026101907,
+    2026101908,
+    2026101909,
+    2026101910
+  ],
+  "planned_max_jobs": 66,
+  "randomization": "One std::mt19937_64 + std::shuffle permutation of initially uncovered nonempty columns. Randomize item order only; each visited item uses its current minimum-loss feasible replacement.",
+  "seed_reproducibility": "Tied to the recorded native binary and compiler standard library; seed and event sequence saved.",
+  "timing": "Fresh processes; new A/B/C/D timed within this batch; common input, rounding, Top-N and feasibility audit. Real reverse CSR construction for R/A/B/C; D uses forward CSR.",
+  "interpretation": "Random seeds change solutions and timing; deterministic repeats measure timing variation only. A/B and C/D event sequences must match.",
+  "validation": {
+    "passed": true,
+    "graphs": 120,
+    "native_calls": 6061,
+    "random_seed_cases": 957,
+    "cases_with_distinct_random_outcomes": 122,
+    "A_B_same_events": true,
+    "C_D_match_global_current_direct_swap_oracle": true,
+    "random_repeats_reproducible": true,
+    "random_move_uses_minimum_loss_for_visited_item": true,
+    "backend_sha256": "f47819f2f464073ce9f2c5edd616c9fb5999b833a9ca1b5f742d73f5cf4caf1d",
+    "native_source_sha256": "786af447a2adabb804b61060f57a14ebb33856916923304734ffd02ee66e4117",
+    "seeds": [
+      2026101901,
+      2026101902,
+      2026101903,
+      2026101904,
+      2026101905,
+      2026101906,
+      2026101907,
+      2026101908,
+      2026101909,
+      2026101910
+    ]
+  },
+  "source_sha256": {
+    "run_strategy_comparison.py": "d3981841ea266c0ac32113e5024d0eb1122eafd07565925b767a6c3c69e61660",
+    "strategy_worker.py": "8072838f9692e34c66b871a813b2336785d59c7b0d56a15da3f648fb767b4d69",
+    "strategy_supervisor.py": "1ea13a8ad832ce26164f87a5af15f68934eb83e55d01450371ff90661be47b6f",
+    "resilient_json.py": "83d5f0358d42bb2cbbc84de0437fac57ca50fed7c7eacec1a1aa5ec672aaf50f",
+    "native/bgcr_d_bench.cpp": "786af447a2adabb804b61060f57a14ebb33856916923304734ffd02ee66e4117"
+  }
+}

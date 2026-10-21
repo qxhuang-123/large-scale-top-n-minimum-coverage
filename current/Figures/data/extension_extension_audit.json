@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "complete": true,
+  "runs": 10,
+  "checks": [
+    {
+      "dataset": "TG",
+      "configurations": 5,
+      "same_inputs": true,
+      "event_pairs": [
+        "A=B",
+        "C=D"
+      ],
+      "exact_reference_verified": true
+    },
+    {
+      "dataset": "VG",
+      "configurations": 5,
+      "same_inputs": true,
+      "event_pairs": [
+        "A=B",
+        "C=D"
+      ],
+      "exact_reference_verified": true
+    }
+  ],
+  "repeats": 1,
+  "random_seed": 2026101901
+}

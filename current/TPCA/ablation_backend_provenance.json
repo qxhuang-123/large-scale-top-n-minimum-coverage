@@ -1,0 +1,28 @@
+{
+  "baseline_native_source_sha256": {
+    "local_repair_impl.inc": "593979efff7c0591b1a977d572d79afac42a855958a7792c9ac16b9cd06fd622",
+    "msvc_compat.h": "4b27cf8e3fd23b846ca908014d2894d33c194d900838c4ad247f7aee561c6691",
+    "state_repair_impl.inc": "35122371ffe78ccda9c5a2ea275f7875b4955067fb7cc862f514e4916add4b0c",
+    "state_variants.cpp": "4fe9d84b30433739f9400604707cff0883113519d801ab75ff37f3705be4e833"
+  },
+  "derived_native_source_sha256": {
+    "local_repair_impl.inc": "593979efff7c0591b1a977d572d79afac42a855958a7792c9ac16b9cd06fd622",
+    "msvc_compat.h": "4b27cf8e3fd23b846ca908014d2894d33c194d900838c4ad247f7aee561c6691",
+    "state_repair_impl.inc": "35122371ffe78ccda9c5a2ea275f7875b4955067fb7cc862f514e4916add4b0c",
+    "state_variants.cpp": "d691f29da060def23daabac39c21b2a53a76fe01bcb3e84fac5a4d2bed0310d0"
+  },
+  "changes": [
+    "Separate native module name",
+    "Add state_source_noheap to source-aggregation condition",
+    "Disable boundary-oracle flag only in state_source_noheap; reuse exact full-column scan already present"
+  ],
+  "flags": [
+    "/O2",
+    "/DNDEBUG",
+    "/std:c++17",
+    "/EHsc"
+  ],
+  "original_benchmark_sources_unchanged": true,
+  "validation_file": "E:\\PythonProject\\TRMNL_BENCH\\validation\\ablation_20261018\\validation.json",
+  "original_F_and_first_batch_not_overwritten": true
+}

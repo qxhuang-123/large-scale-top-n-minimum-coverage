@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "new_solver_records": 10,
+  "old_records_preserved": 66,
+  "table_rows_first_run": 25,
+  "random_seed": 2026101901,
+  "datasets": [
+    {
+      "dataset": "VG",
+      "runs": 5,
+      "same_as_main_graph_and_initial_solution": true,
+      "exact_frontier_verified_at_each_terminal_K": true,
+      "event_pair_sha256": {
+        "A=B": "b0c13f4443fb96e104f9d0f0df9c69000a1a3aca40dfd259a9057fa935c8172b",
+        "C=D": "189c0f828418405f9a0a8298a185d92c79ee3375443975c4a81c4f44c45aad19"
+      },
+      "target_unreached_neighborhood_exhaustion_verified": true
+    },
+    {
+      "dataset": "TG",
+      "runs": 5,
+      "same_as_main_graph_and_initial_solution": true,
+      "exact_frontier_verified_at_each_terminal_K": true,
+      "event_pair_sha256": {
+        "A=B": "abc10777e910b9ec8754b580671a1526ab39417a52327fc232d00428a91babd3",
+        "C=D": "c6742e89e4d214aaa493cd15b8eb82b816c1d62d5607a33b55cee0472d1338a8"
+      },
+      "target_unreached_neighborhood_exhaustion_verified": true
+    }
+  ],
+  "timing_selection": "first run for all five datasets; no selection by speed or quality"
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "dataset": "TG",
+    "same_inputs": true,
+    "equivalent_event_pairs": [
+      "A=B events verified",
+      "C=D events verified"
+    ],
+    "random_seeds_completed": [
+      2026101901
+    ]
+  },
+  {
+    "dataset": "VG",
+    "same_inputs": true,
+    "equivalent_event_pairs": [
+      "A=B events verified",
+      "C=D events verified"
+    ],
+    "random_seeds_completed": [
+      2026101901
+    ]
+  }
+]

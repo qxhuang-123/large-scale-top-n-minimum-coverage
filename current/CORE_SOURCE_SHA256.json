@@ -1,0 +1,16 @@
+{
+  "TPCA/native/local_repair_impl.inc": "593979efff7c0591b1a977d572d79afac42a855958a7792c9ac16b9cd06fd622",
+  "TPCA/native/msvc_compat.h": "4b27cf8e3fd23b846ca908014d2894d33c194d900838c4ad247f7aee561c6691",
+  "TPCA/native/state_repair_impl.inc": "35122371ffe78ccda9c5a2ea275f7875b4955067fb7cc862f514e4916add4b0c",
+  "TPCA/native/state_variants.cpp": "4fe9d84b30433739f9400604707cff0883113519d801ab75ff37f3705be4e833",
+  "TPCA/native_ablation/local_repair_impl.inc": "593979efff7c0591b1a977d572d79afac42a855958a7792c9ac16b9cd06fd622",
+  "TPCA/native_ablation/msvc_compat.h": "4b27cf8e3fd23b846ca908014d2894d33c194d900838c4ad247f7aee561c6691",
+  "TPCA/native_ablation/state_repair_impl.inc": "35122371ffe78ccda9c5a2ea275f7875b4955067fb7cc862f514e4916add4b0c",
+  "TPCA/native_ablation/state_variants.cpp": "d691f29da060def23daabac39c21b2a53a76fe01bcb3e84fac5a4d2bed0310d0",
+  "TPCA/native_progressive/local_repair_impl.inc": "593979efff7c0591b1a977d572d79afac42a855958a7792c9ac16b9cd06fd622",
+  "TPCA/native_progressive/msvc_compat.h": "4b27cf8e3fd23b846ca908014d2894d33c194d900838c4ad247f7aee561c6691",
+  "TPCA/native_progressive/state_repair_impl.inc": "42f47158a37b88823ff178f70a1a8495e50bc3d0b3c725f50e0ac873f2cf35fc",
+  "TPCA/native_progressive/state_variants.cpp": "d564ad197b9cc141b8b6866f1b04eed06919539a10b5487dc83098aa3fe6bdb8",
+  "DGCA/native/bgcr_d_bench.cpp": "786af447a2adabb804b61060f57a14ebb33856916923304734ffd02ee66e4117",
+  "DGCA/supplied/BGCR_OP_Yelp_comparison/src/bgcr_variants.cpp": "06f2b19116e6ac7a95a4fef5beebbc4d004417a1531b34704dbead1cf6082d7b"
+}

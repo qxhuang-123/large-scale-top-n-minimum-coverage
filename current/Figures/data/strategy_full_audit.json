@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "formal_runs": 66,
+  "statuses": {
+    "FEASIBLE": 22,
+    "TARGET_UNREACHED": 44
+  },
+  "datasets": [
+    {
+      "dataset": "OP",
+      "formal_runs": 22,
+      "random_seeds": [
+        2026101901,
+        2026101902,
+        2026101903,
+        2026101904,
+        2026101905,
+        2026101906,
+        2026101907,
+        2026101908,
+        2026101909,
+        2026101910
+      ],
+      "unique_random_event_sequences": 10,
+      "all_deterministic_repeat_event_sequences_identical": true,
+      "A_B_events_identical": true,
+      "C_D_events_identical": true
+    },
+    {
+      "dataset": "YELP",
+      "formal_runs": 22,
+      "random_seeds": [
+        2026101901,
+        2026101902,
+        2026101903,
+        2026101904,
+        2026101905,
+        2026101906,
+        2026101907,
+        2026101908,
+        2026101909,
+        2026101910
+      ],
+      "unique_random_event_sequences": 10,
+      "all_deterministic_repeat_event_sequences_identical": true,
+      "A_B_events_identical": true,
+      "C_D_events_identical": true
+    },
+    {
+      "dataset": "SO",
+      "formal_runs": 22,
+      "random_seeds": [
+        2026101901,
+        2026101902,
+        2026101903,
+        2026101904,
+        2026101905,
+        2026101906,
+        2026101907,
+        2026101908,
+        2026101909,
+        2026101910
+      ],
+      "unique_random_event_sequences": 10,
+      "all_deterministic_repeat_event_sequences_identical": true,
+      "A_B_events_identical": true,
+      "C_D_events_identical": true
+    }
+  ],
+  "input_identity": true,
+  "source_identity": true,
+  "native_seed_passed": true,
+  "integer_objective_and_coverage_audited": true,
+  "direct_neighborhood_exhausted_when_target_unreached": true,
+  "exact_reference_at_same_coverage": true
+}

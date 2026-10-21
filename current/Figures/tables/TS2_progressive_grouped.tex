@@ -1,0 +1,50 @@
+\begin{table*}[t]
+\centering
+\caption{Progressive TPCA comparison.}\label{tab:progressive-comparison}
+\fontsize{8}{9}\selectfont
+\renewcommand{\arraystretch}{.98}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrlrrrr@{}}
+\toprule
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{$\eta$ (\%)} & \multirow{2}{*}{$D=K$} & \multirow{2}{*}{Metric} & \multicolumn{4}{c}{Version}\\
+\cmidrule(l){5-8}
+ & & & & V1 & V2 & V3 & V4\\
+\midrule
+\multirow{12}{*}{OP} & \multirow{3}{*}{1} & \multirow{3}{*}{796} & Core (s) & 0.061 & 0.065 & 0.056 & 0.035 \\
+ &  &  & Total (s) & 0.503 & 0.511 & 0.510 & 0.620 \\
+ &  &  & Peak (GiB) & 0.173 & 0.175 & 0.172 & 0.173 \\
+\addlinespace[1pt]
+ & \multirow{3}{*}{10} & \multirow{3}{*}{939} & Core (s) & 0.405 & 0.094 & 0.088 & 0.047 \\
+ &  &  & Total (s) & 0.864 & 0.565 & 0.541 & 0.489 \\
+ &  &  & Peak (GiB) & 0.172 & 0.191 & 0.180 & 0.173 \\
+\addlinespace[1pt]
+ & \multirow{3}{*}{50} & \multirow{3}{*}{1,574} & Core (s) & 2.778 & 0.122 & 0.120 & 0.099 \\
+ &  &  & Total (s) & 3.239 & 0.559 & 0.566 & 0.622 \\
+ &  &  & Peak (GiB) & 0.174 & 0.195 & 0.194 & 0.181 \\
+\addlinespace[1pt]
+ & \multirow{3}{*}{100} & \multirow{3}{*}{2,367} & Core (s) & 6.663 & 0.176 & 0.142 & 0.155 \\
+ &  &  & Total (s) & 7.099 & 0.610 & 0.574 & 0.598 \\
+ &  &  & Peak (GiB) & 0.176 & 0.196 & 0.195 & 0.195 \\
+\specialrule{0.35pt}{1.8pt}{1.8pt}
+\multirow{12}{*}{Yelp} & \multirow{3}{*}{1} & \multirow{3}{*}{419} & Core (s) & 7.068 & 0.939 & 0.581 & 0.203 \\
+ &  &  & Total (s) & 9.818 & 3.880 & 3.292 & 3.732 \\
+ &  &  & Peak (GiB) & 0.987 & 1.366 & 1.174 & 0.995 \\
+\addlinespace[1pt]
+ & \multirow{3}{*}{10} & \multirow{3}{*}{1,018} & Core (s) & 44.770 & 1.304 & 1.103 & 0.385 \\
+ &  &  & Total (s) & 47.614 & 4.047 & 3.821 & 3.375 \\
+ &  &  & Peak (GiB) & 0.989 & 1.472 & 1.451 & 1.084 \\
+\addlinespace[1pt]
+ & \multirow{3}{*}{50} & \multirow{3}{*}{3,680} & Core (s) & 454.063 & 6.369 & 8.309 & 2.538 \\
+ &  &  & Total (s) & 457.201 & 9.109 & 11.120 & 5.339 \\
+ &  &  & Peak (GiB) & 1.003 & 1.490 & 1.488 & 1.399 \\
+\addlinespace[1pt]
+ & \multirow{3}{*}{100} & \multirow{3}{*}{7,008} & Core (s) & 822.714 & 14.118 & 12.632 & 9.084 \\
+ &  &  & Total (s) & 825.491 & 16.871 & 15.402 & 11.803 \\
+ &  &  & Peak (GiB) & 1.003 & 1.495 & 1.493 & 1.483 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{.98\textwidth}\footnotesize
+\textit{Note:} $N=10$; $\eta$ is the fraction of the available coverage gap. All runs attain $D$, so $D=K$ is reported once. V1 retains local repair; V2 adds the boundary heap, V3 donor aggregation, and V4 terminal aggregation. Total includes construction. One run per setting; exact objectives agree across versions.
+\end{minipage}
+\end{table*}

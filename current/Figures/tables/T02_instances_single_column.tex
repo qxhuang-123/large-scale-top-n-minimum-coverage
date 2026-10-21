@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Statistics of the experimental instances at 40\% retention.}
+\label{tab:T02_instances_single_column}
+\small
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Dataset & Users & Items & Cand. items & Cand. edges \\
+\midrule
+OP & 4,903 & 2,419 & 2,367 & $4.746\times10^{6}$ \\
+Yelp & 9,415 & 9,373 & 7,017 & $3.524\times10^{7}$ \\
+VG & 24,442 & 10,350 & 10,014 & $1.011\times10^{8}$ \\
+TG & 19,412 & 11,924 & 11,709 & $9.253\times10^{7}$ \\
+SO & 35,598 & 18,357 & 17,951 & $2.613\times10^{8}$ \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{.98\linewidth}\footnotesize
+\textit{Note:} Items counts the supplied catalogue before retention; Cand. items counts items incident to retained edges. The latter is $|I|$ in the optimization model.
+\end{minipage}
+\end{table}

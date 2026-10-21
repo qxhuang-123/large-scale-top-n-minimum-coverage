@@ -1,0 +1,38 @@
+\begin{table*}[t]
+\centering
+\caption{Exact coverage and score loss across list lengths.}
+\label{tab:T03_exact_across_N}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{Metric} & \multicolumn{5}{c}{List length $N$} \\
+\cmidrule(l){3-7}
+ &  & 10 & 15 & 20 & 25 & 30 \\
+\midrule
+\multirow{3}{*}{OP} & $K^0$ & 780 & 946 & 1,055 & 1,136 & 1,226 \\
+ & $K_{\max}$ & 2,367 & 2,367 & 2,367 & 2,367 & 2,367 \\
+ & Loss (\%) & 0.0195 & 0.0129 & 0.0096 & 0.0076 & 0.0063 \\
+\addlinespace[4pt]
+\multirow{3}{*}{Yelp} & $K^0$ & 352 & 439 & 513 & 577 & 632 \\
+ & $K_{\max}$ & 7,008 & 7,013 & 7,017 & 7,017 & 7,017 \\
+ & Loss (\%) & 0.4839 & 0.2986 & 0.2135 & 0.1647 & 0.1333 \\
+\addlinespace[4pt]
+\multirow{3}{*}{VG} & $K^0$ & 1,251 & 1,597 & 1,878 & 2,134 & 2,356 \\
+ & $K_{\max}$ & 10,014 & 10,014 & 10,014 & 10,014 & 10,014 \\
+ & Loss (\%) & 0.0415 & 0.0246 & 0.0171 & 0.0129 & 0.0103 \\
+\addlinespace[4pt]
+\multirow{3}{*}{TG} & $K^0$ & 2,426 & 2,906 & 3,317 & 3,649 & 3,986 \\
+ & $K_{\max}$ & 11,709 & 11,709 & 11,709 & 11,709 & 11,709 \\
+ & Loss (\%) & 0.2343 & 0.1390 & 0.0953 & 0.0708 & 0.0554 \\
+\addlinespace[4pt]
+\multirow{3}{*}{SO} & $K^0$ & 2,964 & 3,656 & 4,210 & 4,682 & 5,130 \\
+ & $K_{\max}$ & 17,951 & 17,951 & 17,951 & 17,951 & 17,951 \\
+ & Loss (\%) & 0.0257 & 0.0168 & 0.0125 & 0.0100 & 0.0083 \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{.98\textwidth}\footnotesize
+\textit{Note:} $K^0$ is initial Top-$N$ coverage. Score loss is measured at $K_{\max}$ relative to Top-$N$. DGCA results at the same list lengths are supplied separately.
+\end{minipage}
+\end{table*}

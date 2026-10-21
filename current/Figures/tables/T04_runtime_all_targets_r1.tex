@@ -1,0 +1,40 @@
+\begin{table*}[t]
+\centering
+\caption{Independent build-plus-solve times ($N=10$, first run).}
+\label{tab:T04_runtime_all_targets_r1}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrrr@{}}
+\toprule
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{Algorithm} & \multicolumn{6}{c}{Time (s) at coverage target $\rho$} \\
+\cmidrule(l){3-8}
+ &  & 0\% & 20\% & 40\% & 60\% & 80\% & 100\% \\
+\midrule
+\multirow{5}{*}{OP} & Gurobi-MIP & 48.469 & 101.026 & 184.121 & 178.285 & 186.624 & 118.242 \\
+ & Gurobi-LP & 31.537 & 92.525 & 100.778 & 115.026 & 112.011 & 52.796 \\
+ & MCF & 2.117 & 2.273 & 2.265 & 2.306 & 2.423 & 2.486 \\
+ & TPCA & 0.448 & 0.435 & 0.470 & 0.487 & 0.534 & 0.721 \\
+ & DGCA & 0.124 & 0.125 & 0.127 & 0.141 & 0.144 & 0.155 \\
+\addlinespace[4pt]
+\multirow{3}{*}{Yelp} & MCF & 12.229 & 13.880 & 13.225 & 13.419 & 14.150 & 4.706$^{\dagger}$ \\
+ & TPCA & 2.844 & 3.269 & 4.277 & 6.320 & 9.434 & 10.706$^{\dagger}$ \\
+ & DGCA & 0.495 & 0.501 & 0.539 & 0.547 & 0.549 & 0.599$^{\ddagger}$ \\
+\addlinespace[4pt]
+\multirow{3}{*}{VG} & MCF & 192.826 & 211.239 & 132.414 & 51.948 & 53.791 & 55.307 \\
+ & TPCA & 7.687 & 8.319 & 9.684 & 12.627 & 17.286 & 18.796 \\
+ & DGCA & 1.335 & 1.484 & 1.551 & 1.927 & 2.155 & 2.112$^{\ddagger}$ \\
+\addlinespace[4pt]
+\multirow{3}{*}{TG} & MCF & 33.296 & 34.356 & 34.834 & 35.011 & 36.431 & 36.979 \\
+ & TPCA & 7.027 & 7.003 & 8.076 & 9.328 & 9.156 & 9.370 \\
+ & DGCA & 1.259 & 1.328 & 1.349 & 1.321 & 1.383 & 1.458$^{\ddagger}$ \\
+\addlinespace[4pt]
+\multirow{3}{*}{SO} & MCF & MG & MG & MG & MG & MG & MG \\
+ & TPCA & 19.802 & 21.594 & 110.459 & 224.988 & 340.057 & 199.467 \\
+ & DGCA & 3.132 & 3.312 & 6.097 & 26.339 & 25.833 & 19.983$^{\ddagger}$ \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{.98\textwidth}\footnotesize
+\textit{Note:} First independent run at each target; time includes method construction and the core call. MG: available-memory guard. $\dagger$: infeasible target; TPCA also returns the exact boundary plan. $\ddagger$: DGCA terminates below the target. Gurobi was evaluated only on OP. Independent SO timings vary with execution conditions; all recorded values are retained. These are not cumulative trajectory times.
+\end{minipage}
+\end{table*}

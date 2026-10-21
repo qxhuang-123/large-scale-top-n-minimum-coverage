@@ -20,3 +20,49 @@ gurobi.log
 *.pyd
 *.so
 
+
+# Revised runtime artifacts and data stay local.
+current/TPCA/data/
+current/CommonInput/data/
+current/**/outputs/
+current/**/validation/
+current/**/execution/
+current/**/build/
+current/**/qa/
+current/Figures/figures/
+current/Figures/*.pdf
+*.egg-info/
+*.obj
+*.exp
+*.lib
+
+# Small recorded exchange witnesses used by the figure source audit.
+!current/Figures/data/raw_strategy_extension/**/events.npy
+
+# Recorded verification witnesses, not candidate-graph arrays.
+!current/Figures/data/raw_strategy_extension/TG_A_r1/events.npy
+!current/Figures/data/raw_strategy_extension/TG_A_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/TG_B_r1/events.npy
+!current/Figures/data/raw_strategy_extension/TG_B_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/TG_C_r1/events.npy
+!current/Figures/data/raw_strategy_extension/TG_C_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/TG_D_r1/events.npy
+!current/Figures/data/raw_strategy_extension/TG_D_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/TG_R_r1/events.npy
+!current/Figures/data/raw_strategy_extension/TG_R_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/VG_A_r1/events.npy
+!current/Figures/data/raw_strategy_extension/VG_A_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/VG_B_r1/events.npy
+!current/Figures/data/raw_strategy_extension/VG_B_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/VG_C_r1/events.npy
+!current/Figures/data/raw_strategy_extension/VG_C_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/VG_D_r1/events.npy
+!current/Figures/data/raw_strategy_extension/VG_D_r1/selected_edges.npy
+!current/Figures/data/raw_strategy_extension/VG_R_r1/events.npy
+!current/Figures/data/raw_strategy_extension/VG_R_r1/selected_edges.npy
+current/Figures/tables/*.pdf
+current/Figures/tables/*.png
+current/Figures/tables/*.svg
+
+current/Figures/*.png
+current/Figures/*.svg
