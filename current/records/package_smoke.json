@@ -1,0 +1,17 @@
+{
+  "TPCA": [
+    {
+      "D": 2,
+      "status": "OPTIMAL",
+      "coverage": 2,
+      "integer_objective": 5
+    },
+    {
+      "D": 3,
+      "status": "INFEASIBLE",
+      "coverage": 2,
+      "integer_objective": 5
+    }
+  ],
+  "DGCA": "CLI passed; final plan audited"
+}

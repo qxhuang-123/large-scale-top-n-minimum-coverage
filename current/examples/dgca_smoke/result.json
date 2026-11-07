@@ -1,0 +1,45 @@
+{
+  "status": "OK",
+  "job": {
+    "graph_id": "synthetic-tiny",
+    "N": 1,
+    "D": 3,
+    "mode": "grouped"
+  },
+  "coverage": 2,
+  "integer_objective": 5,
+  "build_s": 0.00012429999999999386,
+  "core_s": 0.00019189999999999485,
+  "total_s": 0.0003161999999999887,
+  "cpu_core_s": 0.0,
+  "assembly_s": 3.1200000000009e-05,
+  "input_validation_s": 9.280000000000399e-05,
+  "load_s": 0.002206600000000003,
+  "native": {
+    "mode": "dynamic_user_grouped_cached",
+    "initial_coverage": 1,
+    "initial_objective": 6.0,
+    "coverage": 2,
+    "objective": 5.0,
+    "target_reached": false,
+    "swaps": 1,
+    "core_seconds": 8.4e-06,
+    "initial_seconds": 1.2e-06,
+    "strategy_setup_seconds": 4.700000000000001e-06,
+    "stats": {
+      "candidate_queries": 4,
+      "cache_hits": 1,
+      "root_updates": 0,
+      "bucket_transfers": 2,
+      "bucket_rescans": 1,
+      "bucket_scan_users": 1,
+      "terminal_edge_checks": 2,
+      "terminal_pointer_advances": 1,
+      "source_refreshes": 4,
+      "source_pointer_advances": 2
+    }
+  },
+  "exact_historical_match": null,
+  "timing": "Same shared graph loader, float64 assembly, row checks and original Top-N for every mode. total=build+native call. Load/initial audit/final audit/export excluded, as in supplied experiment.py.",
+  "stage2_source_sha256": "174c93ea9d430ddc2926f3e2749bbefbdd85568fb475d9d8139d51558e6a3c2c"
+}

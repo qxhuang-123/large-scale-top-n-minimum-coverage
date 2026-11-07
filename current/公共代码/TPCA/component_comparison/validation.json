@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "graphs": 100,
+  "calls": 777,
+  "full_TPCA_equivalence_calls": 259,
+  "LP_objective_and_infeasible_boundary_verified": true,
+  "backend_sha256": "0147509d104ac9a5871c07081ecd3d348f93a04c3e54634fa4d55bb1ded60727"
+}

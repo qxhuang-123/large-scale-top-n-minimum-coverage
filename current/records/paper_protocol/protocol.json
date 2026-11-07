@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    "OP",
+    "YELP",
+    "VG",
+    "TG",
+    "SO"
+  ],
+  "modes": [
+    "stage2_grouped",
+    "random_source",
+    "fixed_source",
+    "dynamic_item_heap"
+  ],
+  "percentages": [
+    0,
+    20,
+    40,
+    60,
+    80,
+    100
+  ],
+  "repeats": 3,
+  "cpu": null,
+  "baseline_sha256": "f47819f2f464073ce9f2c5edd616c9fb5999b833a9ca1b5f742d73f5cf4caf1d",
+  "optimized_sha256": "4c09daa112e69e87fdb6ca051daed0cd158d8f6483b96069bed9df7580f09b8b",
+  "stage2_binary_sha256": "cbc6cf5fd90729af3a3d39d8497c8da653d8f2d08666f70d812293aa39513675",
+  "stage2_source_sha256": "174c93ea9d430ddc2926f3e2749bbefbdd85568fb475d9d8139d51558e6a3c2c",
+  "sources": {
+    "experiment.py": "a83c7cc03eb665b3dc69cb937436b094bd3bb3c5085543e0d8d25410ab202ec2",
+    "common": "7b5462bbcc2d8e37719dbbc9fc440293f6a683dd7d0ac8c59fd11f15042abb79",
+    "baseline_source": "786af447a2adabb804b61060f57a14ebb33856916923304734ffd02ee66e4117"
+  },
+  "preflight": "3 consecutive available physical memory samples >=10 GiB, 5 seconds apart; waiting excluded",
+  "random_seed": 2026101901,
+  "timing": "Independent processes; total=identical input assembly and validation + native solve INCLUDING on-demand bitmap index building; index_build_s is a subset of core_s; load/audit/export excluded; OS caches not cleared. All observations retained. Rotated mode and target order."
+}

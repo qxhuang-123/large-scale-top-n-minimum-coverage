@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "graphs": 600,
+  "stage2_calls": 4236,
+  "original_constructor_and_swap_reused_verbatim": true,
+  "checks": [
+    "independent exhaustive greedy oracle",
+    "complete events",
+    "selected edges",
+    "initial Top-N plan via zero target",
+    "initial objective and coverage",
+    "full coverage/objective trajectories",
+    "terminal direct-neighborhood exhaustion"
+  ],
+  "source_sha256": {
+    "stage2.cpp": "174c93ea9d430ddc2926f3e2749bbefbdd85568fb475d9d8139d51558e6a3c2c",
+    "vendor/reference_core.cpp": "786af447a2adabb804b61060f57a14ebb33856916923304734ffd02ee66e4117",
+    "validate_stage2.py": "219b1355d86e2a5b67acd56fbd23d9e5619113d6d6519af1f4aaaff8b5ca9216"
+  }
+}

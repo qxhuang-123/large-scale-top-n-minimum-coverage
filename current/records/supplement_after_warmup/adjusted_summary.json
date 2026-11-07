@@ -1,0 +1,632 @@
+[
+  {
+    "dataset": "OP",
+    "percentage": 0,
+    "coverage": 780,
+    "integer_objective": 242825254274,
+    "objective_div_1000": 242.825254274,
+    "build": 0.11663003333333334,
+    "solve": 0.0011220666666666805,
+    "total": 0.11775210000000001,
+    "total_sd": 0.0025141689024407747,
+    "total_observations": [
+      0.12035840000000006,
+      0.11755640000000003,
+      0.11534149999999996
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p0_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p0_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\OP_p0_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "OP",
+    "percentage": 20,
+    "coverage": 780,
+    "integer_objective": 242825254274,
+    "objective_div_1000": 242.825254274,
+    "build": 0.11422466666666665,
+    "solve": 0.0010167,
+    "total": 0.11524136666666666,
+    "total_sd": 0.0033795671088666366,
+    "total_observations": [
+      0.11900319999999998,
+      0.11425929999999998,
+      0.11246160000000002
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p20_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p20_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\OP_p20_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "OP",
+    "percentage": 40,
+    "coverage": 947,
+    "integer_objective": 242825254274,
+    "objective_div_1000": 242.825254274,
+    "build": 0.11571159999999997,
+    "solve": 0.0028440333333333476,
+    "total": 0.11855563333333331,
+    "total_sd": 0.0022761989287698884,
+    "total_observations": [
+      0.11823689999999998,
+      0.12097439999999995,
+      0.11645560000000002
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p40_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p40_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\OP_p40_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "OP",
+    "percentage": 60,
+    "coverage": 1421,
+    "integer_objective": 242825254274,
+    "objective_div_1000": 242.825254274,
+    "build": 0.1174453,
+    "solve": 0.006035766666666646,
+    "total": 0.12348106666666665,
+    "total_sd": 0.003615175665625893,
+    "total_observations": [
+      0.12761680000000003,
+      0.12190439999999994,
+      0.12092199999999997
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p60_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p60_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\OP_p60_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "OP",
+    "percentage": 80,
+    "coverage": 1894,
+    "integer_objective": 242825254274,
+    "objective_div_1000": 242.825254274,
+    "build": 0.1169991,
+    "solve": 0.007995599999999992,
+    "total": 0.12499469999999999,
+    "total_sd": 0.006091964914541133,
+    "total_observations": [
+      0.12357889999999996,
+      0.1316699,
+      0.11973529999999999
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p80_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p80_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\OP_p80_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "OP",
+    "percentage": 100,
+    "coverage": 2367,
+    "integer_objective": 242772392070,
+    "objective_div_1000": 242.77239207,
+    "build": 0.11486336666666667,
+    "solve": 0.01739553333333334,
+    "total": 0.1322589,
+    "total_sd": 0.0027012083758940104,
+    "total_observations": [
+      0.1338892,
+      0.12914090000000003,
+      0.13374660000000002
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p100_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\OP_p100_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\OP_p100_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 0,
+    "coverage": 352,
+    "integer_objective": 453219496566,
+    "objective_div_1000": 453.219496566,
+    "build": 0.4739941,
+    "solve": 0.0021931999999999694,
+    "total": 0.4761872999999999,
+    "total_sd": 0.010222370783238123,
+    "total_observations": [
+      0.47100799999999987,
+      0.48796269999999997,
+      0.4695912
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p0_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p0_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\YELP_p0_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 20,
+    "coverage": 1404,
+    "integer_objective": 453219496566,
+    "objective_div_1000": 453.219496566,
+    "build": 0.4729702333333333,
+    "solve": 0.00865273333333331,
+    "total": 0.4816229666666666,
+    "total_sd": 0.01275887980832689,
+    "total_observations": [
+      0.471781,
+      0.4960381999999999,
+      0.47704969999999997
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p20_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p20_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\YELP_p20_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 40,
+    "coverage": 2807,
+    "integer_objective": 453093048805,
+    "objective_div_1000": 453.093048805,
+    "build": 0.47449616666666666,
+    "solve": 0.04351893333333334,
+    "total": 0.5180151000000001,
+    "total_sd": 0.0008930336387840372,
+    "total_observations": [
+      0.5190338999999999,
+      0.5176437,
+      0.5173677000000001
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p40_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p40_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\YELP_p40_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 60,
+    "coverage": 4211,
+    "integer_objective": 452653930801,
+    "objective_div_1000": 452.653930801,
+    "build": 0.459401,
+    "solve": 0.06744053333333333,
+    "total": 0.5268415333333333,
+    "total_sd": 0.005070851299666857,
+    "total_observations": [
+      0.5216129,
+      0.5317383,
+      0.5271733999999999
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p60_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p60_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\YELP_p60_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 80,
+    "coverage": 5614,
+    "integer_objective": 451942148725,
+    "objective_div_1000": 451.942148725,
+    "build": 0.4617792,
+    "solve": 0.09783116666666665,
+    "total": 0.5596103666666666,
+    "total_sd": 0.002195125705588058,
+    "total_observations": [
+      0.5575635999999999,
+      0.5593389,
+      0.5619286
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p80_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p80_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\YELP_p80_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 100,
+    "coverage": 6937,
+    "integer_objective": 450881732030,
+    "objective_div_1000": 450.88173203,
+    "build": 0.45981743333333336,
+    "solve": 0.11152736666666667,
+    "total": 0.5713448,
+    "total_sd": 0.005935304458071204,
+    "total_observations": [
+      0.5781467,
+      0.5686708,
+      0.5672169
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p100_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\YELP_p100_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\YELP_p100_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "VG",
+    "percentage": 0,
+    "coverage": 1251,
+    "integer_objective": 1184136179922,
+    "objective_div_1000": 1184.136179922,
+    "build": 1.3244030666666666,
+    "solve": 0.0048504333333333855,
+    "total": 1.3292535,
+    "total_sd": 0.02565021704644994,
+    "total_observations": [
+      1.3048434000000002,
+      1.3269312,
+      1.3559858999999999
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p0_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p0_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\VG_p0_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "VG",
+    "percentage": 20,
+    "coverage": 2003,
+    "integer_objective": 1184136179922,
+    "objective_div_1000": 1184.136179922,
+    "build": 1.3090906333333334,
+    "solve": 0.03055836666666667,
+    "total": 1.339649,
+    "total_sd": 0.008468450896710573,
+    "total_observations": [
+      1.3493964999999999,
+      1.3354493,
+      1.3341012
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p20_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p20_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\VG_p20_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "VG",
+    "percentage": 40,
+    "coverage": 4006,
+    "integer_objective": 1184136179922,
+    "objective_div_1000": 1184.136179922,
+    "build": 1.2992592666666667,
+    "solve": 0.06960166666666663,
+    "total": 1.3688609333333335,
+    "total_sd": 0.01304207448273983,
+    "total_observations": [
+      1.3719602,
+      1.3545484,
+      1.3800742000000001
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p40_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p40_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\VG_p40_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "VG",
+    "percentage": 60,
+    "coverage": 6009,
+    "integer_objective": 1184136179922,
+    "objective_div_1000": 1184.136179922,
+    "build": 1.3051491333333334,
+    "solve": 0.1103075,
+    "total": 1.4154566333333334,
+    "total_sd": 0.030522579566663852,
+    "total_observations": [
+      1.4205240000000001,
+      1.4431283999999998,
+      1.3827175
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p60_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p60_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\VG_p60_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "VG",
+    "percentage": 80,
+    "coverage": 8012,
+    "integer_objective": 1184100700271,
+    "objective_div_1000": 1184.100700271,
+    "build": 1.3402115333333333,
+    "solve": 0.25153890000000007,
+    "total": 1.5917504333333334,
+    "total_sd": 0.04784058973908393,
+    "total_observations": [
+      1.6386391000000002,
+      1.5936006,
+      1.5430116
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p80_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p80_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\VG_p80_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "VG",
+    "percentage": 100,
+    "coverage": 9988,
+    "integer_objective": 1183474025651,
+    "objective_div_1000": 1183.474025651,
+    "build": 1.2973449,
+    "solve": 0.3389107,
+    "total": 1.6362556,
+    "total_sd": 0.03948501226136329,
+    "total_observations": [
+      1.653714,
+      1.6640020000000002,
+      1.5910507999999999
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p100_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\VG_p100_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\VG_p100_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "TG",
+    "percentage": 0,
+    "coverage": 2426,
+    "integer_objective": 849787793100,
+    "objective_div_1000": 849.7877931,
+    "build": 1.1698632666666666,
+    "solve": 0.0038550333333332945,
+    "total": 1.1737183,
+    "total_sd": 0.025348084075132837,
+    "total_observations": [
+      1.1448359,
+      1.1922681,
+      1.1840509000000001
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p0_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p0_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\TG_p0_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "TG",
+    "percentage": 20,
+    "coverage": 2426,
+    "integer_objective": 849787793100,
+    "objective_div_1000": 849.7877931,
+    "build": 1.1613228333333334,
+    "solve": 0.004083866666666713,
+    "total": 1.1654067000000001,
+    "total_sd": 0.019337745297991836,
+    "total_observations": [
+      1.1873187000000003,
+      1.1581718,
+      1.1507296
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p20_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p20_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\TG_p20_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "TG",
+    "percentage": 40,
+    "coverage": 4684,
+    "integer_objective": 849677063200,
+    "objective_div_1000": 849.6770632,
+    "build": 1.1837551,
+    "solve": 0.030281633333333263,
+    "total": 1.2140367333333333,
+    "total_sd": 0.027218774040234376,
+    "total_observations": [
+      1.2385816,
+      1.2187649999999999,
+      1.1847636
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p40_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p40_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\TG_p40_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "TG",
+    "percentage": 60,
+    "coverage": 7026,
+    "integer_objective": 849351777500,
+    "objective_div_1000": 849.3517775,
+    "build": 1.1607509,
+    "solve": 0.06161533333333328,
+    "total": 1.2223662333333332,
+    "total_sd": 0.019272219237372084,
+    "total_observations": [
+      1.2140919,
+      1.2443939,
+      1.2086128999999999
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p60_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p60_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\TG_p60_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "TG",
+    "percentage": 80,
+    "coverage": 9368,
+    "integer_objective": 848791792500,
+    "objective_div_1000": 848.7917925,
+    "build": 1.165127,
+    "solve": 0.14965206666666667,
+    "total": 1.3147790666666666,
+    "total_sd": 0.005351623028888996,
+    "total_observations": [
+      1.3200353000000002,
+      1.3093369,
+      1.3149649999999997
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p80_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p80_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\TG_p80_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "TG",
+    "percentage": 100,
+    "coverage": 11699,
+    "integer_objective": 847775271200,
+    "objective_div_1000": 847.7752712,
+    "build": 1.1713212666666668,
+    "solve": 0.24158546666666667,
+    "total": 1.4129067333333334,
+    "total_sd": 0.033647289023683996,
+    "total_observations": [
+      1.4172545,
+      1.4441688,
+      1.3772969000000002
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p100_stage2_grouped_r2",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\TG_p100_stage2_grouped_r3",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\TG_p100_stage2_grouped_r4"
+    ]
+  },
+  {
+    "dataset": "SO",
+    "percentage": 0,
+    "coverage": 2964,
+    "integer_objective": 1768054776000,
+    "objective_div_1000": 1768.054776,
+    "build": 5.338290866666666,
+    "solve": 0.011241433333333273,
+    "total": 5.3495323,
+    "total_sd": 2.047313807216722,
+    "total_observations": [
+      7.1963064999999995,
+      5.7042542,
+      3.1480362
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\SO_p0_stage2_grouped_r1",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p0_stage2_grouped_r4",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p0_stage2_grouped_r5"
+    ]
+  },
+  {
+    "dataset": "SO",
+    "percentage": 20,
+    "coverage": 3591,
+    "integer_objective": 1768054776000,
+    "objective_div_1000": 1768.054776,
+    "build": 3.8069973999999998,
+    "solve": 0.25811233333333333,
+    "total": 4.065109733333333,
+    "total_sd": 1.3248632904542346,
+    "total_observations": [
+      3.3715049,
+      5.592779199999999,
+      3.2310451000000002
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\SO_p20_stage2_grouped_r1",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p20_stage2_grouped_r4",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p20_stage2_grouped_r5"
+    ]
+  },
+  {
+    "dataset": "SO",
+    "percentage": 40,
+    "coverage": 7181,
+    "integer_objective": 1768054776000,
+    "objective_div_1000": 1768.054776,
+    "build": 4.096927033333333,
+    "solve": 1.7835574666666663,
+    "total": 5.8804845,
+    "total_sd": 3.7582298648274524,
+    "total_observations": [
+      3.774160599999999,
+      10.2195012,
+      3.6477917
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\SO_p40_stage2_grouped_r1",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p40_stage2_grouped_r4",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p40_stage2_grouped_r5"
+    ]
+  },
+  {
+    "dataset": "SO",
+    "percentage": 60,
+    "coverage": 10771,
+    "integer_objective": 1768054776000,
+    "objective_div_1000": 1768.054776,
+    "build": 3.111053966666667,
+    "solve": 1.0865239333333332,
+    "total": 4.1975779,
+    "total_sd": 0.29969286930958206,
+    "total_observations": [
+      4.0081818,
+      4.5430999000000005,
+      4.041452
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\SO_p60_stage2_grouped_r1",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p60_stage2_grouped_r4",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p60_stage2_grouped_r5"
+    ]
+  },
+  {
+    "dataset": "SO",
+    "percentage": 80,
+    "coverage": 14361,
+    "integer_objective": 1768054776000,
+    "objective_div_1000": 1768.054776,
+    "build": 3.0453406666666667,
+    "solve": 1.4636604666666668,
+    "total": 4.509001133333333,
+    "total_sd": 0.12206031980317494,
+    "total_observations": [
+      4.4826074,
+      4.642099,
+      4.402297
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\SO_p80_stage2_grouped_r1",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p80_stage2_grouped_r4",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p80_stage2_grouped_r5"
+    ]
+  },
+  {
+    "dataset": "SO",
+    "percentage": 100,
+    "coverage": 17935,
+    "integer_objective": 1767548636700,
+    "objective_div_1000": 1767.5486367,
+    "build": 3.117985533333333,
+    "solve": 2.0940903666666664,
+    "total": 5.212075899999999,
+    "total_sd": 0.2540416632730341,
+    "total_observations": [
+      5.505413599999999,
+      5.0640243,
+      5.0667898000000005
+    ],
+    "source_folders": [
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\paper_protocol\\SO_p100_stage2_grouped_r1",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p100_stage2_grouped_r4",
+      "E:\\PythonProject\\CIE_TPACE\\DGCA\\formal_rerun_20261107\\outputs\\supplement_after_warmup\\SO_p100_stage2_grouped_r5"
+    ]
+  }
+]

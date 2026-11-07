@@ -1,0 +1,14 @@
+{
+  "OP": {
+    "known_pairs": 53225,
+    "known_candidates": 21537,
+    "known_initial_top10": 192
+  },
+  "SO": {
+    "samples": 10000,
+    "max_absolute_difference": 0.00010022811889687233,
+    "within_0_000101": 10000,
+    "model": "biased MF, 50 factors",
+    "exporter_exact_identity": "not established"
+  }
+}
