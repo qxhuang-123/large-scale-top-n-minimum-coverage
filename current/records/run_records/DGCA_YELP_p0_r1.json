@@ -1,0 +1,17 @@
+{
+  "status": "OK",
+  "dataset": "YELP",
+  "percentage": 0,
+  "reported_repeat": 1,
+  "record_id": "YELP_p0_stage2_grouped_r2",
+  "graph_id": "436f0408bc83de4ae6e2b81e2bf11532d671881cb49b5e2e90f50493722880cc",
+  "coverage": 352,
+  "integer_objective": 453219496566,
+  "build_s": 0.46897639999999996,
+  "solve_s": 0.0020315999999999113,
+  "total_s": 0.47100799999999987,
+  "input_validation_s": 0.34191520000000003,
+  "exact_event_match": true,
+  "exact_selection_match": true,
+  "source_sha256": "1b046f5d79a602ff4ea1ec806d69102fb1672bd22946e1134ac08ef5a21f06c4"
+}

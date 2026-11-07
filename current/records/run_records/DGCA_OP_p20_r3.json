@@ -1,0 +1,17 @@
+{
+  "status": "OK",
+  "dataset": "OP",
+  "percentage": 20,
+  "reported_repeat": 3,
+  "record_id": "OP_p20_stage2_grouped_r4",
+  "graph_id": "3584b4ad0d3bf3299efca34bfe4bf74b438fd3933ab8eea591d419922b52a420",
+  "coverage": 780,
+  "integer_objective": 242825254274,
+  "build_s": 0.11149830000000002,
+  "solve_s": 0.0009633000000000003,
+  "total_s": 0.11246160000000002,
+  "input_validation_s": 0.0981911,
+  "exact_event_match": true,
+  "exact_selection_match": true,
+  "source_sha256": "427094745387c50ad352700f4f940c2b38b94b83d96fcc89012dc8eaffd3c549"
+}

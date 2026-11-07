@@ -1,17 +1,25 @@
-# TPCA and DGCA submission code
+# TPCA and DGCA
 
-Open this directory in PyCharm. Use Python 3.9 on Windows x64 with the bundled native modules, or rebuild the C++17 extensions for your Python version. Install requirements.txt first.
+Open this directory in PyCharm. The maintained entries are TPCA-OP.py and DGCA-OP.py; replace OP with YELP, VG, TG or SO. Use Python 3.9 on Windows x64 with the bundled modules, or rebuild the C++17 extensions for your Python version. Install requirements.txt first.
 
-TPCA-OP.py and DGCA-OP.py are the maintained production entries; replace OP with YELP, VG, TG or SO. Both accept --n 10 --repeats 3 --percentages 0 20 40 60 80 100. DGCA calls dgca_stage2 in dynamic_user_grouped_cached mode. C++ sources are included. The reference core is required by the current implementation and validation, and is not an alternative production entry.
+Both algorithms accept --n 10 --repeats 3 --percentages 0 20 40 60 80 100. DGCA calls dgca_stage2 in dynamic_user_grouped_cached mode. The reference core is a dependency of the current implementation and its validation.
 
-Configure 数据路径.json with immutable candidate graph folders. Each folder contains graph.json, user_indptr.npy, user_items.npy, scores_integer.npy and scores_original.npy. Large score/candidate arrays are external; obtain the derived data from the study data deposit (the accompanying derived-data deposit). Public dataset sources alone do not reconstruct the archived prediction matrices. Use the graph metadata to verify identity.
+Configure 数据路径.json with the immutable candidate graph folders. Each graph contains graph.json, user_indptr.npy, user_items.npy, scores_integer.npy and scores_original.npy. Large derived score and candidate arrays are provided separately from the code supplement. The synthetic example under examples/tiny_graph is included.
 
-Total = method-specific Build (including input assembly and validation) + complete native Solve (including Top-N and all algorithm-specific index construction). Shared loading/preprocessing and final auditing/export are excluded. Samples are independent processes; reported standard deviations are sample standard deviations. Historical memory is the worker peak working set including resident mapped pages, not private bytes.
+## Reported tables and figure
 
-records/paper_protocol contains the original complete batch; records/supplement_after_warmup contains later measurements and separately archived warmups. The historical adjusted summary selected original and supplementary observations retrospectively. It is preserved for traceability, not relabeled as an independent three-run batch. DGCA_all_measured_summary.csv uses all measured observations: four per target on OP/YELP/VG/TG and five on SO; the separately scheduled warmups are excluded. No new large experiments were run during packaging. The first original repetition supplies the memory column. Manuscript timing ratios must use the same chosen summary throughout.
+records/Table4_TableS1_paper.csv and records/Table6_paper.csv contain the manuscript values. records/main_paper_runs.csv, DGCA_paper_runs.csv and strategy_paper_runs.csv provide the measurements used in the means; each completed reported configuration uses three process runs. The supplied sample standard deviations use ddof=1. Separately scheduled warmups are not included. Record IDs are in reported_run_manifest.json.
 
-Current TPCA component controls and MCF/Gurobi benchmark sources are retained under 公共代码 for evaluating the paper; they are not historical production variants. Build TPCA with 公共代码/TPCA/setup_compact.py, DGCA with 公共代码/DGCA/latest/setup.py, and component controls with 公共代码/TPCA/component_comparison/setup.py, each from its own directory.
+records/Figure2_memory.csv and records/figures/Figure2_memory.* contain the updated memory plot. Each value is the peak worker-process working set, including resident mapped pages, from the first reported repetition identified in memory_run_manifest.json. It is not a mean across repetitions. Table5_tpca_component.csv is the single-run component experiment. Tables 2 and 3 are also included as CSV.
 
-DGCA validation: run 公共代码/DGCA/latest/validate_stage2.py. This compares the production implementation with exhaustive greedy choices and the reference core on small graphs. Archived validation is supplied. No claim of reproducing full-scale timings is made by an import test.
+Total is method-specific Build plus the complete Solve call. Build includes input assembly and validation of the method-specific representation. Solve includes Top-N initialization and algorithm-specific index construction. Shared score prediction/candidate preprocessing and loading, final solution auditing and export are excluded. Details are in records/measurement_protocol.json.
 
-Unified replacement tables: records/Table4_TableS1_unified.csv and records/Table6_unified.csv. records/DGCA_memory_original_r1.csv fixes the memory repetition convention. These use all measured DGCA observations; three-run historical adjusted values remain traceable in records.
+Verify the reported CSV means, standard deviations, repetition counts and DGCA memory values without running the solvers:
+
+    python records/verify_paper_data.py
+
+## Build and validation
+
+Run setup_compact.py from 公共代码/TPCA, setup.py from 公共代码/DGCA/latest, and setup.py from 公共代码/TPCA/component_comparison to build the corresponding native extensions. MCF/Gurobi and component-control sources are retained for the comparisons. Gurobi requires its own installation and license.
+
+Run 公共代码/DGCA/latest/validate_stage2.py for the small-graph exhaustive greedy comparison. Its archived result covers 600 graphs and 4236 calls. examples/tiny_graph supplies a small runnable input; full-scale data are separate.

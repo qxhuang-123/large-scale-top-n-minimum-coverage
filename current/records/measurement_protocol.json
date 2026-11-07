@@ -1,0 +1,18 @@
+{
+  "reported_repetitions": 3,
+  "total": "Build + complete Solve",
+  "build": "Method-specific assembly and input validation",
+  "solve": "Complete native call including Top-N and algorithm-specific index construction",
+  "excluded_from_time": [
+    "shared prediction and candidate preparation",
+    "shared loading",
+    "final auditing",
+    "export"
+  ],
+  "warmup_jobs_in_reported_csv": 0,
+  "memory": "Worker-process peak working set including resident mapped pages",
+  "memory_repetition": "First reported repetition from the updated figure records; record IDs supplied in memory_run_manifest.json",
+  "sample_sd": "Sample standard deviation, ddof=1",
+  "reported_run_manifest": "reported_run_manifest.json",
+  "historical_archive": "Maintained separately; not all excluded historical runs were warmups"
+}

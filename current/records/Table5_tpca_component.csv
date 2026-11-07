@@ -1,0 +1,7 @@
+﻿dataset,variant,total_s,mean_search_region_nodes,cumulative_adjacency_checks_millions,repeats
+OP,Base,25.761,7270,7610.907,1
+OP,Comp,17.497,5827,2341.409,1
+OP,TPCA,0.626,42.66,2.487,1
+YELP,Base,897.62,16432,235211.397,1
+YELP,Comp,872.562,12825.01,155698.026,1
+YELP,TPCA,12.513,386.58,702.274,1

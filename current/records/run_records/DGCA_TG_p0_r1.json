@@ -1,0 +1,17 @@
+{
+  "status": "OK",
+  "dataset": "TG",
+  "percentage": 0,
+  "reported_repeat": 1,
+  "record_id": "TG_p0_stage2_grouped_r2",
+  "graph_id": "3e7aab461ba11fc218c78a3716763e50eca241b092648502eae25a4da06ef62c",
+  "coverage": 2426,
+  "integer_objective": 849787793100,
+  "build_s": 1.1409764,
+  "solve_s": 0.0038594999999999047,
+  "total_s": 1.1448359,
+  "input_validation_s": 0.8027935,
+  "exact_event_match": true,
+  "exact_selection_match": true,
+  "source_sha256": "655aba3df1fa160e65f3ee490a8ef8b2dc7d483735000a29a2b2269242b2508f"
+}

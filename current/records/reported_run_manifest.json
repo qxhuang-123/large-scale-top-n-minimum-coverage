@@ -1,0 +1,722 @@
+[
+  {
+    "dataset": "OP",
+    "percentage": 0,
+    "reported_repeat": 1,
+    "record_id": "OP_p0_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "9233f7de803895a75c3a1376e0314377a32de9cb322afa01e383389893e951e5"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 0,
+    "reported_repeat": 2,
+    "record_id": "OP_p0_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "eab4b074be465ae88e3ba29e6e4ffe248683a366307a6336c31668e4364cc168"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 0,
+    "reported_repeat": 3,
+    "record_id": "OP_p0_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "a49d51159913c8c4887a31e5131643b2f848b359a39ad6ef6f696dd6bc4c5007"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 20,
+    "reported_repeat": 1,
+    "record_id": "OP_p20_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "1217ca787f61748a121a4c22b08a8e04da27c3fd81d249c8e26e36b24c522f6c"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 20,
+    "reported_repeat": 2,
+    "record_id": "OP_p20_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "1e1dbaf0eb0a9c684a73e7155357677541f6d167ee66fd512f20f8349ad86a4c"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 20,
+    "reported_repeat": 3,
+    "record_id": "OP_p20_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "427094745387c50ad352700f4f940c2b38b94b83d96fcc89012dc8eaffd3c549"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 40,
+    "reported_repeat": 1,
+    "record_id": "OP_p40_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "37d70f107af35ed23a17b27f69d26ec39076aa576019b4258a10140d6574e9b7"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 40,
+    "reported_repeat": 2,
+    "record_id": "OP_p40_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "2da945ffac14f93eda88c94a68d5db31d56090b4587c80dac7e9a7b923b346d5"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 40,
+    "reported_repeat": 3,
+    "record_id": "OP_p40_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "f930e62c2a016d8461bb17fdbd908a6942f8fb66385bd6c77d7a132c971d9189"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 60,
+    "reported_repeat": 1,
+    "record_id": "OP_p60_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "344e4ea659a82ef687caa72351e4be601816797137b90b0255906e17481dd095"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 60,
+    "reported_repeat": 2,
+    "record_id": "OP_p60_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "7e581e119241f126409706d70a10d5a4ded0778e1e8650de54ecd3a44d57676f"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 60,
+    "reported_repeat": 3,
+    "record_id": "OP_p60_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "97ac9caa2f8d70f114fb4cddbec2153099be96f54ade01b4e41027edf723c1a1"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 80,
+    "reported_repeat": 1,
+    "record_id": "OP_p80_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "e784f6516d8c679ef16c050e30ab2318015fb0c9c325f5fc92f42afaaaa6455d"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 80,
+    "reported_repeat": 2,
+    "record_id": "OP_p80_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "d439ef556b91ef21d38d8e39bc6c2b9f5c9f81f620b3fbe4ebae442ec9294c58"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 80,
+    "reported_repeat": 3,
+    "record_id": "OP_p80_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "41c1406eb8de8080e23c98cdc8f190e8dff00490fcd05caada8feec325695096"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 100,
+    "reported_repeat": 1,
+    "record_id": "OP_p100_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "843c805cb53a9de12686e36840dc368eaa5509856b33b2853b5b6bc94851d42b"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 100,
+    "reported_repeat": 2,
+    "record_id": "OP_p100_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "d75c59ade9b06042cfb8c2776f7dfd4a785caa42d29d4a6efdff4a0a8ea89f8e"
+  },
+  {
+    "dataset": "OP",
+    "percentage": 100,
+    "reported_repeat": 3,
+    "record_id": "OP_p100_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "eb3d8d169b5a738bbad0d9de0affeacb715ceee7ed645067e93aa8de541d868c"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 0,
+    "reported_repeat": 1,
+    "record_id": "YELP_p0_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "1b046f5d79a602ff4ea1ec806d69102fb1672bd22946e1134ac08ef5a21f06c4"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 0,
+    "reported_repeat": 2,
+    "record_id": "YELP_p0_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "34c60d3ef95de53b77c228854e99eee48a4489a46f0ac5a2755305c7e72f3d5b"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 0,
+    "reported_repeat": 3,
+    "record_id": "YELP_p0_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "49a59dbcaabf30826836c0fc053f5012a5083985e686751c2ea5d223225ed6d2"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 20,
+    "reported_repeat": 1,
+    "record_id": "YELP_p20_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "921a7f8dabdb13ecda6213ee9d2e51520c951521d0267b0de01031f95193971e"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 20,
+    "reported_repeat": 2,
+    "record_id": "YELP_p20_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "8724d4024a99074540c01abf2caf649f94ccfdc09b6dcb08308d2c4c986c9d2a"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 20,
+    "reported_repeat": 3,
+    "record_id": "YELP_p20_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "5bfc07be803da1a19c1fde60c51108472f22e4efe337f57e7ce8a97eeb23771b"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 40,
+    "reported_repeat": 1,
+    "record_id": "YELP_p40_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "07a2a6c111f479a9bfb919e0f851623ad7db4bf23ca2e05f27869c0870c72ef5"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 40,
+    "reported_repeat": 2,
+    "record_id": "YELP_p40_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "26a8d308196c32f3358ec2634209faefd29e732997dc6b8f902887a77d6b6e5d"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 40,
+    "reported_repeat": 3,
+    "record_id": "YELP_p40_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "59d72cde8f1afbc5189f1e9f429e014f2da1b9d231d97a56dfdff5ae6fc6a89c"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 60,
+    "reported_repeat": 1,
+    "record_id": "YELP_p60_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "6c34546898815d638dc0e9bdc4b69bec683ca126899bc1aae10f18b42d42f205"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 60,
+    "reported_repeat": 2,
+    "record_id": "YELP_p60_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "baac8486aa55e5d413ee254e2c01166e42bbbea4bb8b9fcf1b97cfd08b2dce9a"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 60,
+    "reported_repeat": 3,
+    "record_id": "YELP_p60_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "51bb1d56821303ce10b3d1d42f9750ab1468ccbba21259a7a9a809c84b231975"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 80,
+    "reported_repeat": 1,
+    "record_id": "YELP_p80_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "077d58d0017e2f3406f3683444e26fa66f43442515c99944d689bda4c3fbb952"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 80,
+    "reported_repeat": 2,
+    "record_id": "YELP_p80_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "326a5a7ca259aae1298fb1983d5c0cccb2e63a44ecb8351a9b2590eb7061f5db"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 80,
+    "reported_repeat": 3,
+    "record_id": "YELP_p80_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "e923a653160fb7ca7948f15f0b3cddec9ecd6a1edcb3ee6445537a06d5e23475"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 100,
+    "reported_repeat": 1,
+    "record_id": "YELP_p100_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "abae61ef38460084cb36e0a0d423ded8623f75d911bdaf182fcdd611d822c935"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 100,
+    "reported_repeat": 2,
+    "record_id": "YELP_p100_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "0eb470baba9e53337e56721f4e4bdadc1251c7787dd2d1bb731729a335689e0f"
+  },
+  {
+    "dataset": "YELP",
+    "percentage": 100,
+    "reported_repeat": 3,
+    "record_id": "YELP_p100_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "87e4943a9c59d9acb56204a5d19110d1e15a9757fe8b7ec20350c596d23030ef"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 0,
+    "reported_repeat": 1,
+    "record_id": "VG_p0_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "7f424833c71aaaa07e473bfc74a2991081084a9fed0a58b2271864f1131c93d8"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 0,
+    "reported_repeat": 2,
+    "record_id": "VG_p0_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "f601cee3ddecca4db2364d883989168d72689ecbefcc036372a92cfad6afa42a"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 0,
+    "reported_repeat": 3,
+    "record_id": "VG_p0_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "f82890a0242b054a1869435c2817b2a8945c03fb34b2fb9919b6a50717a30dc4"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 20,
+    "reported_repeat": 1,
+    "record_id": "VG_p20_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "9ad93a9441d800b383346b3d8627d75b55ebf5465d1c122a758a91ae8085e663"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 20,
+    "reported_repeat": 2,
+    "record_id": "VG_p20_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "5bf370edcaf0a22e68e69d69dca55aa7fc9ed2aba6f6be17da112b9f2935b96d"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 20,
+    "reported_repeat": 3,
+    "record_id": "VG_p20_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "cc7d8a73b106947a08b397c21e68de5dfdc66b36da1be051087dba6bbf390f51"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 40,
+    "reported_repeat": 1,
+    "record_id": "VG_p40_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "790fbcb8722050617f637b0d9f8b59808d8296320b7114c1b122e40b508bacc4"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 40,
+    "reported_repeat": 2,
+    "record_id": "VG_p40_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "b74bc69b5972a3f069846e4874cab30dcbc3cd62286d4f492846458dc6104b21"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 40,
+    "reported_repeat": 3,
+    "record_id": "VG_p40_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "810068564ff8d2a6dc065b447b93262d2301db2527119863df0fabf610b13171"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 60,
+    "reported_repeat": 1,
+    "record_id": "VG_p60_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "9573f2aa11c874a29604060c0d113ff7151e780a8c92b99800f49e2287942b20"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 60,
+    "reported_repeat": 2,
+    "record_id": "VG_p60_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "ddccf155c4efa47f882bf6fa6a91cf602f711248971917e15fcd19736e997572"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 60,
+    "reported_repeat": 3,
+    "record_id": "VG_p60_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "d6123da3fd97aa38e182a7c5bf3039e754845aef60d80495c120195cacefde4e"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 80,
+    "reported_repeat": 1,
+    "record_id": "VG_p80_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "d75b654f1bb8aa8d232216dca4f03333aeafb06013742c5a7cc50e63465252c3"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 80,
+    "reported_repeat": 2,
+    "record_id": "VG_p80_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "fef0bba7df06a66b0dd9a095a1c175339fcd4a4e319fc5dd541897a1112a863b"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 80,
+    "reported_repeat": 3,
+    "record_id": "VG_p80_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "c4737fb2ae551e7d9e799459e63f41768599ea24f19c06f02cfc9083bc058d6b"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 100,
+    "reported_repeat": 1,
+    "record_id": "VG_p100_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "adceca1dea485c9509f85f3a92fd5269f62a36c8bd7f1be8bd088353ba1745e9"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 100,
+    "reported_repeat": 2,
+    "record_id": "VG_p100_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "ef1da2c1fef3d0f9af92932abc7734c33065c2d2c14ef7695762a97e28431239"
+  },
+  {
+    "dataset": "VG",
+    "percentage": 100,
+    "reported_repeat": 3,
+    "record_id": "VG_p100_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "f7f1de369452cec3d9bcdd88810db9943713173395243dbe68aa7d5c8b56f0ff"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 0,
+    "reported_repeat": 1,
+    "record_id": "TG_p0_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "655aba3df1fa160e65f3ee490a8ef8b2dc7d483735000a29a2b2269242b2508f"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 0,
+    "reported_repeat": 2,
+    "record_id": "TG_p0_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "2532875e23fc9fd6aeb060dfb7c2bb6c1cf8bd58d17a1413200fc5efd5a8568d"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 0,
+    "reported_repeat": 3,
+    "record_id": "TG_p0_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "1c4b94533e48112b743db39e99a6864f50ac3dd2af8065a14ecbd5b01a110735"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 20,
+    "reported_repeat": 1,
+    "record_id": "TG_p20_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "b0d398902648f7e5b8c5cee7ac62a7159643f096362d1ab062567a7bd195c712"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 20,
+    "reported_repeat": 2,
+    "record_id": "TG_p20_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "eb7b743ef026b6b1ad1b28b5c254ee7c9779658811c9d1d7904403e519201299"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 20,
+    "reported_repeat": 3,
+    "record_id": "TG_p20_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "fff8603ff101de1c53f886c5bb4c12a5acc3ede5132770c81d5618d504338f05"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 40,
+    "reported_repeat": 1,
+    "record_id": "TG_p40_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "c56af02ab22469496db0e845cc4f825b393f053d86889294d0a6b5b072b16c81"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 40,
+    "reported_repeat": 2,
+    "record_id": "TG_p40_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "76293636f7711bdc0a23335cdfd3b2ece464bb70964dfa567082fa2f049fb409"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 40,
+    "reported_repeat": 3,
+    "record_id": "TG_p40_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "93da0bf77fe4879fc3dfb17933c6703c90b26ce9207f2f40a4ca2a7253161a6a"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 60,
+    "reported_repeat": 1,
+    "record_id": "TG_p60_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "dbe01813a60b5dd13de60e0bd17cbe5e9bea5e49f70139370f7c2f74b95ea4bc"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 60,
+    "reported_repeat": 2,
+    "record_id": "TG_p60_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "e7adaea6cc78036c6eb7ef46d8a4d833e6d3fddcbe86049ab2632b59691223dd"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 60,
+    "reported_repeat": 3,
+    "record_id": "TG_p60_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "bc914aa146aec8b7c90b86b71a05f96584d531e0de135be5584e40576f8bd386"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 80,
+    "reported_repeat": 1,
+    "record_id": "TG_p80_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "0d14e09601dd81cfe08b1cf678851a2b2e5cdac30c620d17382d5d373faaa5c8"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 80,
+    "reported_repeat": 2,
+    "record_id": "TG_p80_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "c442588a6a71c76472207c4e65526d03ef64e96a21b9c59134d0e22ca5ae7fb0"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 80,
+    "reported_repeat": 3,
+    "record_id": "TG_p80_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "4b19800cdfd59a8497c2893c4cea60634125cb9818b964ea56fe35759f616039"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 100,
+    "reported_repeat": 1,
+    "record_id": "TG_p100_stage2_grouped_r2",
+    "recorded_repeat": 2,
+    "source_sha256": "8d629819a36e7b091a97b0382941892673914a6a5f7a2017095a7469e7f3f4f4"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 100,
+    "reported_repeat": 2,
+    "record_id": "TG_p100_stage2_grouped_r3",
+    "recorded_repeat": 3,
+    "source_sha256": "705f3c30c5b3d45df7888058cbbd142d2b1a0916cf94e0a153e6ac6d870654bd"
+  },
+  {
+    "dataset": "TG",
+    "percentage": 100,
+    "reported_repeat": 3,
+    "record_id": "TG_p100_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "42574c9bb99adad6f9fdc2bb75b2469a3a38723ebfd1c199b8c20d7ce97dd2c6"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 0,
+    "reported_repeat": 1,
+    "record_id": "SO_p0_stage2_grouped_r1",
+    "recorded_repeat": 1,
+    "source_sha256": "47ce109fbf11fed6504b3717eca1b870418bb3ce59572d760dd8bf7029dc733e"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 0,
+    "reported_repeat": 2,
+    "record_id": "SO_p0_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "eb7b8454867684490d4612eeb1fad460fd8a582f5e9d4ae3c1e7a5743991504e"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 0,
+    "reported_repeat": 3,
+    "record_id": "SO_p0_stage2_grouped_r5",
+    "recorded_repeat": 5,
+    "source_sha256": "d07688a51b9088891f7af7c3102aa99d0d725a34a640153f7cc2c3119edfaa72"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 20,
+    "reported_repeat": 1,
+    "record_id": "SO_p20_stage2_grouped_r1",
+    "recorded_repeat": 1,
+    "source_sha256": "a8e51ec0373ed4392b9d2453eaf824efcda7803f83b0cc021ebb390e2b6ed3b0"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 20,
+    "reported_repeat": 2,
+    "record_id": "SO_p20_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "654e2fbc192f7e7cc38553cfbdc5bcf7eae9350ab31fa3dc42dee9afe159d02d"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 20,
+    "reported_repeat": 3,
+    "record_id": "SO_p20_stage2_grouped_r5",
+    "recorded_repeat": 5,
+    "source_sha256": "f5d0ed405bc201fe30163064f4e120faedb45fec866992ec3106f12c5c8f85a0"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 40,
+    "reported_repeat": 1,
+    "record_id": "SO_p40_stage2_grouped_r1",
+    "recorded_repeat": 1,
+    "source_sha256": "16d141224647613d737ee40205eb8f4d475c7e41ec6bcdc38fd14e8da6c85c73"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 40,
+    "reported_repeat": 2,
+    "record_id": "SO_p40_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "a8474a24efd07bfa438d6c49a1e6f70c2bc6befe0914d0481c04fa9f3c3be37b"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 40,
+    "reported_repeat": 3,
+    "record_id": "SO_p40_stage2_grouped_r5",
+    "recorded_repeat": 5,
+    "source_sha256": "6e3b9f7f60a02cc4c463d4b175f82b11b73fcd139426272e16be9ad2766c21c6"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 60,
+    "reported_repeat": 1,
+    "record_id": "SO_p60_stage2_grouped_r1",
+    "recorded_repeat": 1,
+    "source_sha256": "86cd2b965e85cb129d4739ddc223b536f7dcd02711d00e75182460c8ab820838"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 60,
+    "reported_repeat": 2,
+    "record_id": "SO_p60_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "2d2831396ea3b481b119514852d7ec657ba730c68a815dbb384346fb8678ade7"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 60,
+    "reported_repeat": 3,
+    "record_id": "SO_p60_stage2_grouped_r5",
+    "recorded_repeat": 5,
+    "source_sha256": "71b3b5f6521838e7591e4d98265bbe1473f210d904e02ce793f368ff6fa9d6ee"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 80,
+    "reported_repeat": 1,
+    "record_id": "SO_p80_stage2_grouped_r1",
+    "recorded_repeat": 1,
+    "source_sha256": "8b01c669c278102141e1331741aedaddb18baa007cf82e1e4f0bb769d4d3ea45"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 80,
+    "reported_repeat": 2,
+    "record_id": "SO_p80_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "b94f936e71fbdbd52839b96a096c7735316d76c2faaa41cf22463c349a2e4a82"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 80,
+    "reported_repeat": 3,
+    "record_id": "SO_p80_stage2_grouped_r5",
+    "recorded_repeat": 5,
+    "source_sha256": "5f2ebf445b41da9526f74a41ea6cec8d6d6af6446cdba6836a4aa8cb6a0a6f60"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 100,
+    "reported_repeat": 1,
+    "record_id": "SO_p100_stage2_grouped_r1",
+    "recorded_repeat": 1,
+    "source_sha256": "3171ce8bb7b0f98791b40f7194d9f988dda9e5e397b988617d2044ef9d04c0e6"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 100,
+    "reported_repeat": 2,
+    "record_id": "SO_p100_stage2_grouped_r4",
+    "recorded_repeat": 4,
+    "source_sha256": "707d4eca04e82bf51b4d53991b6b8a19bbb57faf9d6af40d50d6eed14297cacb"
+  },
+  {
+    "dataset": "SO",
+    "percentage": 100,
+    "reported_repeat": 3,
+    "record_id": "SO_p100_stage2_grouped_r5",
+    "recorded_repeat": 5,
+    "source_sha256": "27d7e9dde8f88912336ff8dcc09a03d0e4e28b470ba45dbc50e0b2d2c9b5cffd"
+  }
+]

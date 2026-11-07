@@ -1,0 +1,17 @@
+{
+  "status": "OK",
+  "dataset": "VG",
+  "percentage": 0,
+  "reported_repeat": 2,
+  "record_id": "VG_p0_stage2_grouped_r3",
+  "graph_id": "0188cfed7fa6f0dba4635254b33208ed1a648a8c212e0e83462b753e78a3470a",
+  "coverage": 1251,
+  "integer_objective": 1184136179922,
+  "build_s": 1.321853,
+  "solve_s": 0.005078200000000033,
+  "total_s": 1.3269312,
+  "input_validation_s": 0.9578029,
+  "exact_event_match": true,
+  "exact_selection_match": true,
+  "source_sha256": "f601cee3ddecca4db2364d883989168d72689ecbefcc036372a92cfad6afa42a"
+}
